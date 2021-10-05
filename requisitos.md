@@ -4,18 +4,50 @@
 
 ### RF 01
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit nulla vel diam vehicula, eu porttitor nulla aliquam.
+O sistema deverá ser capaz de armazenar de cada usuário email, nome, senha, data de nascimento, número de telefone. 
 
 ### RF 02
 
-Nullam laoreet, mauris ac tempor vulputate, orci metus aliquet augue, at accumsan odio mi eu sapien. Aliquam tincidunt metus ut aliquet vehicula. Aliquam vitae arcu sed lacus fermentum sagittis.
+O sistema deverá ser capaz de armazenar e exibir postagens, anúncios feitos por usuários além de alterar e excluir os mesmmos.
+
+### RF 03
+
+O sistema deverá ser capaz de exibir texto e imagens em postagens além de sinalizar qual usuário a fez.
+
+## RF 04
+
+O sistema deverá ser capaz de permitir interação entre usuários e suas postagens além de data e horario que foi feito.
+
+### RF 05
+
+O sistema deverá ser capaz de realizar buscas por usuários e postagens.
+
+### RF 06
+
+O sistema deverá ser capaz de autenticar e controlar o acesso de usuários com criptografia.
+
+### RF 07
+
+O sistema deverá ser capaz de identificar comportamentos hostis ou suspeitos de usuários.
+
+### RF
+
+O sistema deverá ser capaz de adaptar sua interface para diferentes exibições em dispositivos.
 
 ## Requisitos Não-Funcionais
 
 ### RNF 01
 
-Nulla facilisi. Etiam tempus dolor et odio tincidunt fermentum. Donec pharetra nulla eu euismod maximus. Maecenas eu mauris tincidunt, pulvinar tellus sed, blandit eros.
+O sistema deverá ser desenvolvido como uma plataforma web.
 
 ### RNF 02
 
-Nam id enim ut quam faucibus scelerisque at non diam. Morbi eget eleifend lectus, quis fringilla elit. Morbi iaculis, elit vel accumsan hendrerit, ipsum purus varius lacus, eget facilisis massa mauris ac ipsum.
+O sistema deverá ser desenvolvido nas linguagem de programação PHP e Javascript.
+
+### RNF 03
+
+O sistema deverá registrar as informações em um banco de dados MySQL.
+
+### RNF 04
+
+O sistema deverá utilizar padrões internacionais de acessibilidade.
