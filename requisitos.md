@@ -51,3 +51,7 @@ O sistema deverá registrar as informações em um banco de dados MySQL.
 ### RNF 04
 
 O sistema deverá utilizar padrões internacionais de acessibilidade.
+
+### RNF 05
+
+O sistema deverá ser adaptável ao usuário, possibilitando personalização da aparência e implementação de certas funcionalidades.
