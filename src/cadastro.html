@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Odin - Cadastro</title>
+        <link rel="stylesheet" href="_css/style.css" />
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <a class="logo" href="index.php">Cadastro</a>
+
+                <div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                        
+                <ul class="nav-list">
+                    <li><a href="index.php">Entrar</a></li>
+                    <li><a href="cadastro.html">Cadastrar-se</a></li>
+                    <li><a href="#">Equipe</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <main>
+            <script src="_js/mobile-navbar.js"></script>
+
+            <div id="divcad">
+                <form id="formcad" action = "operador.php" method = "POST">
+                    <input type="hidden" name="operacao" value="cadastro">
+                    <p>Nome: <input type="text" name="nome" size="30"></p>
+                    <p>Sobrenome: <input type="text" name="sobrenome" size="30"></p>
+                    <p>Data de nascimento: <input type="date" name="datanasc"></p>
+                    <p>E-mail: <input type="email" name="email" size="30"></p>
+                    <p>Senha: <input type="password" name="senha"></p>
+                    <p>Confirme sua senha: <input type="password" name="csenha"></p>
+                    <p>Telefone (celular): <input type="tel" name="telefone" size="11"></p>
+                    <input type="submit" value="Cadastrar">
+                </form>
+            </div>
+        </main>
+
+    </body>
+</html>
