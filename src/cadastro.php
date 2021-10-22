@@ -21,7 +21,7 @@
                         
                 <ul class="nav-list">
                     <li><a href="index.php">Entrar</a></li>
-                    <li><a href="cadastro.html">Cadastrar-se</a></li>
+                    <li><a href="cadastro.php">Cadastrar-se</a></li>
                     <li><a href="#">Equipe</a></li>
                 </ul>
             </nav>
@@ -33,13 +33,13 @@
             <div id="divcad">
                 <form id="formcad" action = "operador.php" method = "POST">
                     <input type="hidden" name="operacao" value="cadastro">
-                    <p>Nome: <input type="text" name="nome" size="30"></p>
-                    <p>Sobrenome: <input type="text" name="sobrenome" size="30"></p>
-                    <p>Data de nascimento: <input type="date" name="datanasc"></p>
-                    <p>E-mail: <input type="email" name="email" size="30"></p>
-                    <p>Senha: <input type="password" name="senha"></p>
-                    <p>Confirme sua senha: <input type="password" name="csenha"></p>
-                    <p>Telefone (celular): <input type="tel" name="telefone" size="11"></p>
+                    <p>Nome: <input type="text" name="nome" size="30" maxlength="30" required="required"></p>
+                    <p>Sobrenome: <input type="text" name="sobrenome" size="30" maxlength="30" required="required"></p>
+                    <p>Data de nascimento: <input type="date" name="datanasc" required="required" max="<?php echo date('Y-m-d', strtotime('-18 year')); ?>"></p>
+                    <p>E-mail: <input type="email" name="email" size="30" maxlength="30" required="required"></p>
+                    <p>Senha: <input type="password" name="senha" maxlength="20" minlength="8" required="required"></p>
+                    <p>Confirme sua senha: <input type="password" name="csenha" maxlength="20" minlength="8" required="required"></p>
+                    <p>Telefone (celular): <input type="tel" name="telefone" pattern="[0-9]{2}[9]{1}[0-9]{8}$" required="required"></p>
                     <input type="submit" value="Cadastrar">
                 </form>
             </div>

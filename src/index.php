@@ -21,7 +21,7 @@
                 
         <ul class="nav-list">
           <li><a href="index.php">Entrar</a></li>
-          <li><a href="cadastro.html">Cadastrar-se</a></li>
+          <li><a href="cadastro.php">Cadastrar-se</a></li>
           <li><a href="#">Equipe</a></li>
         </ul>
       </nav>

@@ -30,7 +30,7 @@
             $erro = 1;
         }
 
-        if (strlen($email) < 10){
+        if (strlen($email) < 10 || filter_var($email, FILTER_VALIDATE_EMAIL) == FALSE){
             echo "Digite seu e-mail corretamente. <br>";
             $erro = 1;
         }
@@ -45,13 +45,14 @@
             $erro = 1;
         }
 
+        $senha_cripto = password_hash($senha, PASSWORD_DEFAULT);
 
         if ($erro == 0){
-            /*$mysqli = mysqli_connect("localhost","estudante","123","ds30x");
-            $sql = "INSERT INTO usuarios (username,senha,nome,idade,email)";
-            $sql .= "VALUES ('$username','$senha','$nome',$idade,'$email')";
+            $mysqli = mysqli_connect("localhost","viking","valhalla","odin");
+            $sql = "INSERT INTO usuarios (nome, sobrenome, datanasc, email, senha, telefone)";
+            $sql .= "VALUES ('$nome', '$sobrenome', '$datanasc', '$email', '$senha_cripto', '$telefone');";
             mysqli_query($mysqli,$sql);
-            mysqli_close($mysqli); */
+            mysqli_close($mysqli);
             echo "Cadastro bem-sucedido. <br>";
         }
     }
