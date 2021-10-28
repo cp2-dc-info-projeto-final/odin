@@ -1,6 +1,12 @@
 <!DOCTYPE HTML>
 
-<?php include "auth.inc" ?>
+<?php 
+  include "auth.inc";
+  include "mysqli_connect.inc";
+  $sql = "SELECT * FROM usuarios WHERE email = '$email';";
+  $res = mysqli_query($mysqli, $sql);
+  $usuario = mysqli_fetch_array($res);
+?>
 
 <html lang="pt-br">
   <head>
@@ -36,7 +42,7 @@
        <div class="newPost">
           <div class="infoUser">
                 <div class="imgUser"></div>
-                <strong>Erick Silva</strong>
+                <?php echo "<strong>" . $usuario["nome"] . " " . $usuario["sobrenome"] . "</strong>"; ?>
             </div>    
 
                 <form action="" class="formPost">
@@ -59,3 +65,5 @@
 
   </body>
 </html>
+
+<?php mysqli_close($mysqli); ?>
