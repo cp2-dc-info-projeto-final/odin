@@ -11,7 +11,7 @@
     <body>
         <header>
             <nav>
-                <a class="logo" href="index.php">Cadastro</a>
+                <a class="logo" href="index.php">Odin</a>
 
                 <div class="mobile-menu">
                     <div class="line1"></div>
@@ -20,7 +20,7 @@
                 </div>
                         
                 <ul class="nav-list">
-                    <li><a href="index.php">Entrar</a></li>
+                    <li><a href="login.html">Entrar</a></li>
                     <li><a href="cadastro.php">Cadastrar-se</a></li>
                     <li><a href="#">Equipe</a></li>
                 </ul>

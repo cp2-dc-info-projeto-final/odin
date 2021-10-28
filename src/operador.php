@@ -1,4 +1,6 @@
 <?php
+    include "mysqli_connect.inc";
+
     $operacao = $_POST["operacao"];
 
     if ($operacao == "cadastro"){
@@ -35,6 +37,14 @@
             $erro = 1;
         }
 
+        $sql = "SELECT * FROM usuarios WHERE email = '$email';";
+        $res = mysqli_query($mysqli, $sql);
+
+        if (mysqli_num_rows($res) >= 1){
+            echo "Esse e-mail já pertence a outra conta. <br>";
+            $erro = 1;
+        }
+
         if ($senha != $csenha){
             echo "As senha não coincidem. Digite a mesma senha nos dois campos. <br>";
             $erro = 1;
@@ -48,14 +58,13 @@
         $senha_cripto = password_hash($senha, PASSWORD_DEFAULT);
 
         if ($erro == 0){
-            $mysqli = mysqli_connect("localhost","viking","valhalla","odin");
             $sql = "INSERT INTO usuarios (nome, sobrenome, datanasc, email, senha, telefone)";
             $sql .= "VALUES ('$nome', '$sobrenome', '$datanasc', '$email', '$senha_cripto', '$telefone');";
             mysqli_query($mysqli,$sql);
-            mysqli_close($mysqli);
             echo "Cadastro bem-sucedido. <br>";
         }
     }
+    
 
 
 
@@ -65,5 +74,5 @@
 
 
 
-
+    mysqli_close($mysqli);
 ?>

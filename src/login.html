@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odin</title>
+    <link rel="stylesheet" href="_css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a class="logo" href="index.php">Odin</a>
+
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        
+        <ul class="nav-list">
+          <li><a href="login.html">Entrar</a></li>
+          <li><a href="cadastro.php">Cadastrar-se</a></li>
+          <li><a href="#">Equipe</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+      <script src="_js/mobile-navbar.js"></script>
+
+      <div class="content">      
+        <div id="login">
+          <form method="POST" action="login.php">
+            <h1>Log in</h1> 
+            <p> 
+              <label for="email_login">E-mail:</label>
+              <input id="email_login" name="email_login" required="required" type="email" />
+            </p>
+            
+            <p> 
+              <label for="senha_login">Senha:</label>
+              <input id="senha_login" name="senha_login" required="required" type="password" /> 
+            </p>
+            
+            <p> 
+              <input type="submit" value="Entrar" /> 
+            </p>
+            
+            <p class="link">
+              Ainda não tem conta?
+              <a href="cadastro.php">Cadastre-se</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </main>
+
+  </body>
+</html>

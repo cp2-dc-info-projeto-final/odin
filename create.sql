@@ -9,6 +9,3 @@ CREATE TABLE usuarios (
     senha varchar(300) NOT NULL,
     telefone char(11) NOT NULL
     );
-
-CREATE USER 'viking'@'localhost' IDENTIFIED BY 'valhalla';
-GRANT ALL PRIVILEGES ON odin.* TO 'viking'@'localhost';
