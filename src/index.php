@@ -23,8 +23,8 @@
         </div>
         
         <ul class="nav-list">
-          <li><a href="#">Buscar</a></li>
-          <li><a href="#">Editar Dados</a></li>
+          <li><a href="#">Perfil</a></li>
+          <li><a href="#">Amigos</a></li>
           <li><a href="logout.php">Sair</a></li>
         </ul>
       </nav>
@@ -32,6 +32,27 @@
     
     <main>
       <script src="_js/mobile-navbar.js"></script>
+      
+       <div class="newPost">
+          <div class="infoUser">
+                <div class="imgUser"></div>
+                <strong>Erick Silva</strong>
+            </div>    
+
+                <form action="" class="formPost">
+                    <textarea name="textarea" placeholder="Mostre seus produtos !!!"></textarea>
+                    
+                    <div class="iconsAndButton">
+                        <div class="icons">
+                            <button class="btnFileForm"><img src="./assets/img.svg" alt="Adicionar uma imagem"></button>
+                            <button class="btnFileForm"><img src="./assets/gif.svg" alt="Adicionar um gif"></button>
+                            <button class="btnFileForm"><img src="./assets/video.svg" alt="Adicionar um video"></button>
+                        </div>
+
+                        <button type="submit" class="btnSubmitForm">Publicar</button>
+                    </div>
+                </form>
+      </div>
 
       
     </main>
