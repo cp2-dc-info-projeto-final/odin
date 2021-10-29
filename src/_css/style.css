@@ -28,10 +28,12 @@
     height: 8vh;
   }
   
-  main {
-    background: url("../_img/bg-vikings.jpg") no-repeat center center;
+  body {
+    background: url("../_img/bg-vikings.jpg") no-repeat center center fixed;
     background-size: cover;
-    height: 92vh;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
     
   }
   
@@ -203,7 +205,7 @@
   }
 
   div.newPost form.formPost div.iconsAndButton button.btnSubmitForm{
-    background: black;
+    background: #483d8b;
     padding: 10px 50px;
     color:  #fff;
     font-weight: bold;
@@ -211,5 +213,116 @@
     cursor: pointer;
     border: 0;
     border-radius: 10px;
+    transition: 0.2s;
   }
 
+  div.newPost form.formPost div.iconsAndButton button.btnSubmitForm:hover{
+    background: black;
+
+  }
+
+  ul.posts li.post {
+    margin-bottom: 50px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    width: 100%;
+    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.5);
+
+  }
+
+  ul.posts li.post >p {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  ul.posts li.post div.infoUserPost {
+    display: flex;
+    align-items: center;
+    
+  }
+  ul.posts li.post div.infoUserPost div.nameAndHour {
+    margin-left: 10px;
+  }
+  ul.posts li.post div.infoUserPost div.imgUserPost {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #483d8b;
+  }
+
+  ul.posts li.post div.infoUserPost div.nameAndHour >strong {
+    color: #483d8b;
+
+  }
+
+  ul.posts li.post div.infoUserPost div.nameAndHour >p {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  ul.posts li.post div.infoUserPost >p {
+    color: #D1D1D1;
+    font-size: 12px;
+
+  }
+
+  ul.posts li.post >p {
+    width: 100%;
+    margin: 20px 0;
+    font-weight: bold;
+    color: #727272;
+  }
+
+  ul.posts li.post div.actionBtnPost{
+    display: flex;
+    align-items: center;
+    
+  }
+
+  ul.posts li.post div.actionBtnPost button.filesPost {
+    padding: 5px 20px;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2;
+   
+  }
+   
+  ul.posts li.post div.actionBtnPost button.filesPost img{
+    margin-right: 5px;
+
+  }
+
+  .like {
+     background: #483d8b;
+  }
+
+  .like:hover {
+     background: #685a9e;
+
+  }
+
+  .comment {
+    background: #ffd004;
+  }
+
+  .comment:hover {
+    background: #efc200;
+
+  }
+
+  .share {
+    background: #000000;
+  }
+
+  .share:hover {
+    background: #4f4f4f;
+
+  }
