@@ -59,8 +59,80 @@
                     </div>
                 </form>
       </div>
-
       
+      <ul class="posts">
+        <li class="post">
+          <div class="infoUserPost">
+            <div class="imgUserPost"></div>
+              
+            <div class="nameAndHour">
+              <strong>Erick Silva</strong>
+              <p>14h</p>
+            </div>
+          </div>
+
+        <p>
+          Queria compartilhar o quão barato está o PS6 e a placa de vídeo 4090, estão por somente 10 reais aqui na Lucas'bazar 
+          sim e essa é a ultima chance de você conseguir esses produtos por esses preços e na compra dos dois você ganha 
+          um xbox series Z venha logo a Rua outubro melhor mês N 666
+        </p>
+
+        <div class="actionBtnPost">
+          <button type="button" class="filesPost like"><img src="./assets/heart.svg" alt="Curtir">Curtir</button>
+          <button type="button" class="filesPost comment"><img src="./assets/comment.svg" alt="Comentar">Comentar</button>
+          <button type="button" class="filesPost share"><img src="./assets/share.svg" alt="Compartilhar">Compartilhar</button>
+        </div>
+
+        </li>
+        
+        <li class="post">
+          <div class="infoUserPost">
+            <div class="imgUserPost"></div>
+              
+            <div class="nameAndHour">
+              <strong>Erick Silva</strong>
+              <p>14h</p>
+            </div>
+          </div>
+
+        <p>
+          Queria compartilhar o quão barato está o PS6 e a placa de vídeo 4090, estão por somente 10 reais aqui na Lucas'bazar 
+          sim e essa é a ultima chance de você conseguir esses produtos por esses preços e na compra dos dois você ganha 
+          um xbox series Z venha logo a Rua outubro melhor mês N 666
+        </p>
+
+        <div class="actionBtnPost">
+          <button type="button" class="filesPost like"><img src="./assets/heart.svg" alt="Curtir">Curtir</button>
+          <button type="button" class="filesPost comment"><img src="./assets/comment.svg" alt="Comentar">Comentar</button>
+          <button type="button" class="filesPost share"><img src="./assets/share.svg" alt="Compartilhar">Compartilhar</button>
+        </div>
+
+        </li>
+
+        <li class="post">
+          <div class="infoUserPost">
+            <div class="imgUserPost"></div>
+              
+            <div class="nameAndHour">
+              <strong>Erick Silva</strong>
+              <p>14h</p>
+            </div>
+          </div>
+
+        <p>
+          Queria compartilhar o quão barato está o PS6 e a placa de vídeo 4090, estão por somente 10 reais aqui na Lucas'bazar 
+          sim e essa é a ultima chance de você conseguir esses produtos por esses preços e na compra dos dois você ganha 
+          um xbox series Z venha logo a Rua outubro melhor mês N 666
+        </p>
+
+        <div class="actionBtnPost">
+          <button type="button" class="filesPost like"><img src="./assets/heart.svg" alt="Curtir">Curtir</button>
+          <button type="button" class="filesPost comment"><img src="./assets/comment.svg" alt="Comentar">Comentar</button>
+          <button type="button" class="filesPost share"><img src="./assets/share.svg" alt="Compartilhar">Compartilhar</button>
+        </div>
+
+        </li>
+      </ul>     
     </main>
 
   </body>
