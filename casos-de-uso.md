@@ -80,18 +80,174 @@ Sistema de Logout
 
 ### CDU 03
 
-Duis nec orci quis velit faucibus hendrerit tempus vel libero.
+Caso de uso: cadastrar usuário  
 
 **Fluxo Principal**
 
-1. Praesent interdum lectus sit amet augue tincidunt imperdiet.
-2. Duis ac dolor vel nisi imperdiet vehicula et non sem.
-3. Nunc imperdiet tortor consequat, lobortis purus non, interdum risus.
+1- O sistema apresenta um formulário com campos e-mail, nome, sobrenome, senha, confirma sua senha, data de nascimento e telefone(celular) 
+
+2- O usuário insere seus dados pessoais e clicar no botão cadastrar 
+
+3- O sistema armazena as informações do usuário no banco de dados  
+
+4- O sistema encaminha o usuário para tela de login 
 
 **Fluxo Alternativo A**
 
-1. Aliquam efficitur arcu ac fermentum egestas.
-2. Pellentesque ac diam vitae erat bibendum hendrerit.
-3. Mauris sed purus sit amet lectus efficitur placerat et eu diam.
-4. Aenean ullamcorper tellus quis nibh porttitor congue.
-5. Phasellus laoreet erat eget condimentum dictum.
+1- Se o usuário não preencher o campo de e-mail corretamente o sistema irá informa-lo que o campo do e-mail precisa ser preenchido corretamente  
+
+2- O usuário preenchera o campo de e-mail corretamente 
+
+3- O usuário clica no botão cadastrar 
+
+4- O sistema encaminhara para tela de login
+
+**FLUXO ALTERNATIVO B** 
+
+1- Se o usuário não preencher o campo de nome e sobrenome corretamente o sistema irá informa-lo que o campo do nome e sobrenome precisa ser preenchido corretamente 
+
+2- O usuário preenchera o campo de nome e sobrenome corretamente 
+
+3- O usuário clica no botão cadastrar 
+
+4- O sistema encaminhara o usuário para tela de login 
+
+**FLUXO ALTERNATIVO C** 
+
+1- Se o usuário não preencher o campo de senha e confirma senha corretamente o sistema irá informa-lo que o campo de senha e confirma senha precisa ser preenchido corretamente 
+
+2- O usuário preenchera o campo de senha e confirma senha corretamente  
+
+3- O usuário clica no botão cadastrar 
+
+4- O sistema encaminhara o usuário para tela de login 
+
+**FLUXO ALTERNATIVO D** 
+
+1- Se o usuário não preencher o campo de telefone(celular) corretamente o sistema irá informa-lo que o campo do telefone(celular) precisa ser preenchido corretamente 
+
+2- O usuário preenchera o campo do telefone (celular) corretamente 
+
+3- O usuário clica no botão cadastrar 
+
+4- O sistema encaminhara o usuário para tela de login 
+
+**FLUXO ALTERNATIVO E**
+
+1- Se o usuário preencher o campo de data de nascimento e ele for menor de idade o sistema reconhece que essa data e de um menor de idade  
+
+2- O sistema irá informa-lo que não poderá efetuar o cadastro 
+
+3- O usuário preenchera o campo de data de nascimento com uma data valida 
+
+4- O usuário clica no botão cadastrar 
+
+5- O sistema encaminhara o usuário para tela de login  
+
+**FLUXO ALTERNATIVO F** 
+
+1- Se o usuário não preencher nem um dos campos do formulário o sistema irá pedir para que preencha todos os campos corretamente 
+
+2- O usuário preenchera todos os campos corretamente  
+
+3- O usuário clica no botão cadastrar 
+
+4- O sistema encaminhara o usuário para tela de login 
+
+**FLUXO ALTERNATIVO G**  
+
+1- Se usuário preencher com o campo senha. E o confirma senha não for compatível com a senha 
+
+2- O sistema irá informa-lo que o campo senha e confirma senha não são compatíveis  
+
+3- O usuário irá inserir corretamente os campos 
+
+4- O usuário clica no botão cadastrar  
+
+5- O sistema encaminhara o usuário para tela de login
+
+Caso de uso: editar informações usuário 
+
+**FLUXO PRINCIPAL** 
+
+1- O sistema apresenta um formulário com campos e-mail, nome, sobrenome, sua senha atual, nova senha, confirma sua  nova senha, data de nascimento e telefone(celular) 
+
+2- O usuário atualiza seus dados pessoais e clicar no botão atualizar 
+
+3- O sistema armazena as informações do usuário no banco de dados  
+
+4- O sistema encaminha o usuário para tela de login 
+
+**FLUXO ALTERNATIVO A**   
+
+1- Se o usuário não preencher o campo de e-mail corretamente o sistema irá informa-lo que o campo do e-mail precisa ser preenchido corretamente  
+
+2- O usuário preenchera o campo de e-mail corretamente 
+
+3- O usuário clica no botão atualizar 
+
+4- O sistema encaminhara para tela de login  
+
+**FLUXO ALTERNATIVO B** 
+
+1- Se o usuário não preencher o campo de nome e sobrenome corretamente o sistema irá informa-lo que o campo do nome e sobrenome precisa ser preenchido corretamente 
+
+2- O usuário preenchera o campo de nome e sobrenome corretamente 
+
+3- O usuário clica no botão atualizar 
+
+4- O sistema encaminhara o usuário para tela de login 
+
+**FLUXO ALTERNATIVO C** 
+
+1- Se o usuário não preencher o campo de senha e confirma senha corretamente o sistema irá informa-lo que o campo de senha e confirma senha precisa ser preenchido corretamente 
+
+2- O usuário preenchera o campo de senha e confirma senha corretamente 
+
+3- O usuário clica no botão atualizar  
+
+4- O sistema encaminhara o usuário para tela de login 
+
+**FLUXO ALTERNATIVO D** 
+
+1- Se o usuário não preencher o campo de telefone(celular) corretamente o sistema irá informa-lo que o campo do telefone(celular) precisa ser preenchido corretamente 
+
+2- O usuário preenchera o campo do telefone (celular) corretamente 
+
+3- O usuário clica no botão atualizar  
+
+4- O sistema encaminhara o usuário para tela de login 
+
+**FLUXO ALTERNATIVO E** 
+
+1- Se o usuário preencher o campo de data de nascimento e ele for menor de idade o sistema reconhece que essa data e de um menor de idade 
+
+2- O sistema irá informa-lo que não poderá atualizar sua conta 
+
+3- O usuário preenchera o campo de data de nascimento com uma data valida 
+
+4- O usuário clica no botão atualizar 
+
+5- O sistema encaminhara o usuário para tela de login  
+
+**FLUXO ALTERNATIVO F** 
+
+1- Se o usuário não preencher nem um dos campos do formulário o sistema irá pedir para que preencha todos os campos corretamente 
+
+2- O usuário preenchera todos os campos corretamente  
+
+3- O usuário clica no botão atualizar  
+
+4- O sistema encaminhara o usuário para tela de login 
+
+**FLUXO ALTERNATIVO G** 
+
+1- Se usuário preencher com o campo senha. E o confirma senha não for compatível com a senha  
+
+2- O sistema irá informa-lo que campo senha e confirma senha não são compatíveis  
+
+3- O usuário irá inserir corretamente os campos  
+
+4- O usuário clica no botão atualizar 
+
+5- O sistema encaminhara o usuário para tela de login 
