@@ -16,6 +16,7 @@
 
   <body>
     <header>
+      <script src="_js/logout.js"></script>
       <nav>
         <a class="logo" href="index.php">Odin</a>
 
@@ -30,7 +31,7 @@
           <li><a href="#">Perfil</a></li>
           <li><a href="#">Amigos</a></li>
           <li><a href="editar.php">Editar usuário</a></li>
-          <li><a href="cadastro.html">Sair</a></li>
+          <li><a onclick = confirmarSaida()>Sair</a></li>
         </ul>
       </nav>
     </header>

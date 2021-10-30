@@ -162,7 +162,7 @@
             $sql .= "WHERE id = $id;";
             mysqli_query($mysqli,$sql);
             echo "Atualização bem-sucedida. <br>";
-            echo "<a href='index.php'>Home</a>";
+            header("Location: login.html");
         }else{
             echo "<br><a href='editar.php'>Tentar editar o usuário novamente</a>";
         }
