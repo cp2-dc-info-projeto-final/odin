@@ -2,15 +2,14 @@
 
 ## Lista dos Casos de Uso
 
- - [CDU 01](#CDU-01): Quisque id neque a erat imperdiet dictum et ut mauris.
- - [CDU 02](#CDU-02): Morbi fringilla dolor at mattis vestibulum.
+ - [CDU 01](#CDU-01): Login
+ - [CDU 02](#CDU-02): Logout
  - [CDU 03](#CDU-03): Duis nec orci quis velit faucibus hendrerit tempus vel libero.
 
 
 ## Lista dos Atores
 
- - Cras tempor
- - Donec a lorem
+ - Usuário 
 
 ## Diagrama de Casos de Uso
 
@@ -20,52 +19,64 @@
 
 ### CDU 01
 
-Quisque id neque a erat imperdiet dictum et ut mauris.
+Sistema de login
 
 **Fluxo Principal**
 
-1. Vivamus nec velit id risus sodales fermentum ut a mi.
-2. Nunc a ligula ac libero pellentesque auctor ornare at sem.
-3. In quis ante scelerisque felis luctus malesuada.
-4. Pellentesque mattis dui quis eleifend accumsan.
+1- O sistema apresenta um formulário e campos E-mail e senha. 
+2- O usuário insere seu E-mail e senha e clica no botão “Entrar”. 
+3- O sistema valida o E-mail e a senha do usuário. 
+4- O sistema encaminha o usuário para sua tela inicial.
 
 **Fluxo Alternativo A**
 
-1. Pellentesque id mauris id ex fringilla iaculis.
-2. Maecenas ut dui at sapien rhoncus porttitor in sed turpis.
-3. Maecenas fringilla augue id sodales volutpat.
-4. Nulla vehicula lectus eu eros faucibus porta.
-5. Morbi non sem in diam dictum aliquet sit amet at metus.
-6. Aenean dictum diam in tempus ornare.
+1- O sistema apresenta um formulário e campos E-mail e senha. 
+2- O usuário insere seu E-mail e senha e clica no botão “Entrar”. 
+3- O sistema informa que o E-mail está inválido. 
+4- O usuário corrige as informações de E-mail e senha clica no botão “Entrar”.  
+5- O sistema encaminha o usuário para sua tela inicial. 
 
 **Fluxo Alternativo B**
 
-1. Ut elementum dolor id lorem elementum, et condimentum eros laoreet.
-2. Nulla sollicitudin arcu nec suscipit volutpat.
-3. Aliquam mattis sapien nec ornare faucibus.
-4. Sed eu massa nec enim condimentum commodo at eget ligula.
-5. Nam ultricies velit nec erat feugiat condimentum.
-6. Nam vitae lacus porttitor, sodales orci vel, lobortis arcu.
+1- O sistema apresenta um formulário e campos E-mail e senha. 
+2- O usuário insere seu E-mail e Senha e clica no botão “Entrar”. 
+3- O sistema informa que o Senha está inválido. 
+4- O usuário corrige as informações de E-mail e senha clica no botão “Entrar”.  
+5- O sistema encaminha o usuário para sua tela inicial.
 
+**Fluxo Alternativo C**
+
+1- O sistema apresenta um formulário e campos E-mail e senha. 
+2- O usuário clica no botão “Entrar”. 
+3- O sistema apresenta um popup pedindo para preencher os campos de E-mail e senha. 
+4- O usuário insere seu E-mail e senha clica no botão “Entrar”.  
+5- O sistema encaminha o usuário para sua tela inicial. 
+
+**Fluxo Alternativo D**
+
+1- O sistema apresenta um formulário e campos E-mail e senha. 
+2- O usuário clica no botão “Cadastre-se”. 
+3- O sistema encaminha o usuário para tela de cadastro.
 
 ### CDU 02
 
-Morbi fringilla dolor at mattis vestibulum.
+Sistema de Logout
 
 **Fluxo Principal**
 
-1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-2. Mauris varius massa ac fermentum scelerisque.
-3. Morbi in tortor dignissim, bibendum tellus et, varius odio.
-4. Mauris egestas leo a suscipit feugiat.
+1- O sistema exibe a tela inicial da home. 
+2- O usuário clica no botão sair. 
+3- O sistema exibe um Pop-up de alerta perguntando se o usuário realmente deseja sair. 
+4- Usuário clica no botão de confirmação. 
+5- O sistema encaminha o usuário para tela de login. 
 
 **Fluxo Alternativo A**
 
-1. Nulla elementum diam eu elementum rutrum.
-2. Aenean scelerisque est at nunc ornare, ac condimentum justo sollicitudin.
-3. Quisque eget risus ut est lacinia sollicitudin ac non diam.
-4. Quisque ac nulla convallis, lobortis nibh ac, tristique enim.
-5. Nulla ultricies metus nec risus mollis, interdum ultrices justo malesuada.
+1- O sistema exibe a tela inicial da home. 
+2- O usuário clica no botão sair.  
+3- O sistema exibe um Pop-up de alerta perguntando se o usuário realmente deseja sair. 
+4- Usuário clica no botão de cancelamento. 
+5- O sistema mantém o usuário em sua tela incial. 
 
 ### CDU 03
 
