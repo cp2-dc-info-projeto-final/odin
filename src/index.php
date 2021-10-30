@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
-
-<?php 
-  include "auth.inc";
-  include "usuario_info.inc";
-?>
-
 <html lang="pt-br">
+
+  <?php 
+    include "auth.inc";
+    include "mysqli_connect.inc";
+  ?>
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -23,24 +23,26 @@
           <div class="line1"></div>
           <div class="line2"></div>
           <div class="line3"></div>
+          <div class="line4"></div>
         </div>
-        
+                
         <ul class="nav-list">
-          <li><a href="perfil.php">Perfil</a></li>
+          <li><a href="#">Perfil</a></li>
           <li><a href="#">Amigos</a></li>
-          <li><a href="editar.php">Editar</a></li>
-          <li><a href="logout.php">Sair</a></li>
+          <li><a href="editar.php">Editar usuário</a></li>
+          <li><a href="cadastro.html">Sair</a></li>
         </ul>
       </nav>
     </header>
     
-    <main>
+    <main class="main">
       <script src="_js/mobile-navbar.js"></script>
-      
-       <div class="newPost">
+       
+      <!---Formulario de Postagens-->
+      <div class="newPost">
           <div class="infoUser">
                 <div class="imgUser"></div>
-                <?php echo "<strong>" . $usuario["nome"] . " " . $usuario["sobrenome"] . "</strong>"; ?>
+                <strong><?php echo $usuario["nome"] . " " . $usuario["sobrenome"]; ?></strong>
             </div>    
 
                 <form action="" class="formPost">
@@ -130,7 +132,9 @@
         </div>
 
         </li>
-      </ul>     
+
+      </ul>
+
     </main>
 
   </body>
