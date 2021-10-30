@@ -2,10 +2,7 @@
 
 <?php 
   include "auth.inc";
-  include "mysqli_connect.inc";
-  $sql = "SELECT * FROM usuarios WHERE email = '$email';";
-  $res = mysqli_query($mysqli, $sql);
-  $usuario = mysqli_fetch_array($res);
+  include "usuario_info.inc";
 ?>
 
 <html lang="pt-br">
@@ -29,8 +26,9 @@
         </div>
         
         <ul class="nav-list">
-          <li><a href="#">Perfil</a></li>
+          <li><a href="perfil.php">Perfil</a></li>
           <li><a href="#">Amigos</a></li>
+          <li><a href="editar.php">Editar</a></li>
           <li><a href="logout.php">Sair</a></li>
         </ul>
       </nav>
@@ -137,5 +135,3 @@
 
   </body>
 </html>
-
-<?php mysqli_close($mysqli); ?>
