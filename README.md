@@ -26,4 +26,4 @@ O público-alvo do projeto são pessoas com interesse em compartilhar produtos n
 
 **Modelagem do Banco de Dados**
 
-![Diagrama de Banco de Dados](diagrama-exemplo.png)
+![Diagrama de Banco de Dados](DBD_Odin.png)
