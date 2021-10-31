@@ -355,7 +355,7 @@
 
   h1{
     font-size: 48px;
-    color: #066a75;
+    color: #483d8b;
     padding: 2px 0 10px 0;
     font-family: Arial,sans-serif;
     font-weight: bold;
@@ -420,7 +420,7 @@
   input[type="submit"]{
     width: 100%!important;
     cursor: pointer;  
-    background: rgb(61, 157, 179);
+    background: #483d8b;
     padding: 8px 5px;
     color: #fff;
     font-size: 20px;  
@@ -435,7 +435,7 @@
   }
 
   input[type="submit"]:hover{
-    background: #4ab3c6;
+    background: #3d3473;
   }
 
   .link{
@@ -456,11 +456,11 @@
 
   .link a {
     font-weight: bold;
-    background: #f7f8f1;
+    background: #483d8b;
     padding: 6px;
-    color: rgb(29, 162, 193);
+    color: #fff;
     margin-left: 10px;
-    border: 1px solid #cbd518;
+    border: 1px solid #f7f7f7;
 
     -webkit-border-radius: 4px;
     border-radius: 4px;  
@@ -470,9 +470,8 @@
   }
 
   .link a:hover {
-    color: #39bfd7;
-    background: #f7f7f7;
-    border: 1px solid #4ab3c6;
+    background: #282144;
+  
   }
 
   #cadastro, 
