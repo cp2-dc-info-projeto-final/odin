@@ -10,87 +10,41 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Odin</title>
     <link rel="stylesheet" href="_css/style.css" />
   </head>
 
   <body>
     <header>
-      <nav class="navbar fixed-top navbar-expand-sm 
-      navbar-dark bg-dark">
+      <script src="_js/logout.js"></script>
+      <nav>
+        <a class="logo" href="index.php">Odin</a>
 
-        <a  
-          href="#" 
-          class="navbar-brand mb-0 h1">
-            <img 
-            class="d-inline-block align-top" src="./assets/icon8.svg.jpeg" 
-            width="30" height="30"/>
-          Odin
-        </a>
-        <button 
-        type="button" 
-        data-bs-toggle="collapse" 
-        data-bs-target="#navbarNav" 
-        aria-controls="navbarNav" 
-        aria-expanded="false" 
-        aria-label="Toggle navigation" 
-        class="navbar-toggler"
-        >
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a href="#" class="nav-link active">
-                Perfil
-              </a>
-            </li>
-            <li class="nav-item active">
-              <a href="#" class="nav-link">
-                Amigos
-              </a>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="#" class="nav-link 
-              dropdown-toggle" 
-              id="navbarDropdown" 
-              role="button" 
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              >
-                Opções
-              </a>
-              <ul class="dropdown-menu"
-              aria-labelledby="navbarDropdown">
-                <li><a href="editar.php" 
-                  class="dropdown-item">Editar Usuario</a></li>
-                <li><a href="#" 
-                  class="dropdown-item">Ajuda e Suporte</a></li>
-                <li><a href="#" 
-                  class="dropdown-item">Sair</a></li>
-
-              </ul>
-            </li>
-          </ul>          
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+          <div class="line4"></div>
         </div>
-        <form class="d-flex">
-          <input type="text" class="form-control me-2">
-          <button 
-          type="submit" class="btn btn-primary custom-btn" style="color: white;">Procurar</button>
-            Procurar
-          </button>
-        </form>
-      </nav>
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <div class="search-box">
+          <input class="search-txt" type="text" name="" placeholder="Pesquise Aqui">
+          
+        </div>
+                
+        <ul class="nav-list">
+          <li><a href="#">Perfil</a></li>
+          <li><a href="#">Amigos</a></li>
+          <li><a href="editar.php">Editar usuário</a></li>
+          <li><a onclick = confirmarSaida()>Sair</a></li>
+        </ul>
+      </nav>
     </header>
     
     <main class="main">
       <script src="_js/mobile-navbar.js"></script>
        
       <!---Formulario de Postagens-->
-      <li style="height: 50px;"></li>
       <div class="newPost">
           <div class="infoUser">
                 <div class="imgUser"></div>
@@ -188,7 +142,10 @@
         </div>
 
         </li>
+
       </ul>
+
     </main>
+
   </body>
 </html>
