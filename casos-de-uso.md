@@ -4,7 +4,8 @@
 
  - [CDU 01](#CDU-01): Login
  - [CDU 02](#CDU-02): Logout
- - [CDU 03](#CDU-03): Cadastrar e Editar usuário
+ - [CDU 03](#CDU-03): Cadastrar 
+ - [CDU 04](#CDU-04): Editar usuário
 
 
 ## Lista dos Atores
