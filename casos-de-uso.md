@@ -169,6 +169,10 @@ Caso de uso: cadastrar usuário
 
 Caso de uso: editar informações usuário 
 
+###CDU 04
+
+Caso de uso: editar usuário  
+
 **FLUXO PRINCIPAL** 
 
 1- O sistema apresenta um formulário com campos e-mail, nome, sobrenome, sua senha atual, nova senha, confirma sua  nova senha, data de nascimento e telefone(celular) 
