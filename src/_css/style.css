@@ -36,6 +36,12 @@
     width: 100vw;
     
   }
+
+  .search-box {
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+  }
   
   .nav-list {
     list-style: none;
@@ -328,6 +334,7 @@
 
   }
 
+
   #divcad{
     margin: 0 10% 0 62.5%;
   }
@@ -475,16 +482,17 @@
   }
 
   #cadastro, 
-  #login{
-    position: absolute;
-    top: 0px;
-    width: 88%;   
+  #login {
+    position: relative;
+    top: 100px;
+    left: 400px;
+    width: 100%;   
     padding: 18px 6% 60px 6%;
     margin: 0 0 35px 0;
     background: #f7f7f7;
     border: 1px solid rgba(147, 184, 189,0.8);
 
-    -webkit-box-shadow: 5px;
+    -webkit-shadow: 5px;
     border-radius: 5px;
 
     -webkit-animation-duration: 0.5s;

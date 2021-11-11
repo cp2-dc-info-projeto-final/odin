@@ -26,6 +26,11 @@
           <div class="line3"></div>
           <div class="line4"></div>
         </div>
+
+        <div class="search-box">
+          <input class="search-txt" type="text" name="" placeholder="Pesquise Aqui">
+          
+        </div>
                 
         <ul class="nav-list">
           <li><a href="#">Perfil</a></li>
@@ -82,6 +87,8 @@
           <button type="button" class="filesPost like"><img src="./assets/heart.svg" alt="Curtir">Curtir</button>
           <button type="button" class="filesPost comment"><img src="./assets/comment.svg" alt="Comentar">Comentar</button>
           <button type="button" class="filesPost share"><img src="./assets/share.svg" alt="Compartilhar">Compartilhar</button>
+          <button type="button" class="filesPost like">Excluir</button>
+         
         </div>
 
         </li>
@@ -106,6 +113,7 @@
           <button type="button" class="filesPost like"><img src="./assets/heart.svg" alt="Curtir">Curtir</button>
           <button type="button" class="filesPost comment"><img src="./assets/comment.svg" alt="Comentar">Comentar</button>
           <button type="button" class="filesPost share"><img src="./assets/share.svg" alt="Compartilhar">Compartilhar</button>
+          <button type="button" class="filesPost like">Excluir</button>
         </div>
 
         </li>
@@ -130,6 +138,7 @@
           <button type="button" class="filesPost like"><img src="./assets/heart.svg" alt="Curtir">Curtir</button>
           <button type="button" class="filesPost comment"><img src="./assets/comment.svg" alt="Comentar">Comentar</button>
           <button type="button" class="filesPost share"><img src="./assets/share.svg" alt="Compartilhar">Compartilhar</button>
+          <button type="button" class="filesPost like">Excluir</button>
         </div>
 
         </li>
