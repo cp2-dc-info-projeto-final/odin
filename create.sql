@@ -1,5 +1,7 @@
 CREATE DATABASE odin;
 
+USE odin;
+
 CREATE TABLE usuarios (
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nome varchar(30) NOT NULL,
@@ -7,5 +9,6 @@ CREATE TABLE usuarios (
     datanasc date NOT NULL,
     email varchar(30) NOT NULL,
     senha varchar(300) NOT NULL,
-    telefone char(11) NOT NULL
-    );
+    telefone char(11) NOT NULL,
+    adm tinyint(1) NOT NULL DEFAULT 0
+);
