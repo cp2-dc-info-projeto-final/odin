@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 
 <?php 
-  include "auth.inc";
-  include "usuario_info.inc";
+    include "auth.inc";
+    include "usuario_get.inc";
 ?>
 
 <html lang="pt-br">

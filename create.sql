@@ -12,3 +12,7 @@ CREATE TABLE usuarios (
     telefone char(11) NOT NULL,
     adm tinyint(1) NOT NULL DEFAULT 0
 );
+
+-- Cadastre seu primeiro usuário e use esse comando para torná-lo administrador da rede social:
+
+UPDATE usuarios SET adm = 1 WHERE id = 1;

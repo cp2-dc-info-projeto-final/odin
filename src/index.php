@@ -3,7 +3,6 @@
 
   <?php 
     include "auth.inc";
-    include "mysqli_connect.inc";
   ?>
 
   <head>
@@ -28,15 +27,17 @@
         </div>
 
         <div class="search-box">
-          <input class="search-txt" type="text" name="" placeholder="Pesquise Aqui">
-          
+          <form action = "operador.php" method = "POST">
+            <input type="hidden" name="operacao" value="buscar">
+            <input class="search-txt" type="text" name = "busca" placeholder="Pesquise Aqui">
+          </form>
         </div>
                 
         <ul class="nav-list">
           <li><a href="#">Perfil</a></li>
           <li><a href="#">Amigos</a></li>
           <li><a href="editar.php">Editar usuário</a></li>
-          <li><a onclick = confirmarSaida()>Sair</a></li>
+          <li><a onclick="confirmarSaida()">Sair</a></li>
         </ul>
       </nav>
     </header>
@@ -87,8 +88,11 @@
           <button type="button" class="filesPost like"><img src="./assets/heart.svg" alt="Curtir">Curtir</button>
           <button type="button" class="filesPost comment"><img src="./assets/comment.svg" alt="Comentar">Comentar</button>
           <button type="button" class="filesPost share"><img src="./assets/share.svg" alt="Compartilhar">Compartilhar</button>
-          <button type="button" class="filesPost like">Excluir</button>
-         
+          <?php
+            if ($usuario["adm"] == 1 /* || $usuario["id"] == $post["id_usuario"]*/){
+              echo '<button type="button" class="filesPost like">Excluir</button>';
+            }
+          ?>
         </div>
 
         </li>

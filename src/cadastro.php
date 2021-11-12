@@ -31,8 +31,7 @@
             <script src="_js/mobile-navbar.js"></script>
 
             <div id="divcad">
-                <form id="formcad" action = "operador.php" method = "POST">
-                    <input type="hidden" name="operacao" value="cadastro">
+                <form id="formcad" action = "cad.php" method = "POST">
                     <p>Nome: <input type="text" name="nome" size="30" maxlength="30" required="required"></p>
                     <p>Sobrenome: <input type="text" name="sobrenome" size="30" maxlength="30" required="required"></p>
                     <p>Data de nascimento: <input type="date" name="datanasc" required="required" max="<?php echo date('Y-m-d', strtotime('-18 year')); ?>"></p>

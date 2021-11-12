@@ -8,7 +8,7 @@
     }
     if(empty($email) OR empty($senha)){
         echo "O Log In ainda não foi feito.";
-        echo "<p><a href='login.html'>Página de Log In</a></p>";
+        header("Location: login.html");
         exit;
     }
     else{
@@ -20,7 +20,7 @@
             unset($_SESSION["email"]);
             unset($_SESSION["senha"]);
             echo "O Log In ainda não foi feito.";
-            echo "<p><a href='login.html'>Página de Log in</a></p>";
+            header("Location: login.html");
             mysqli_close($mysqli);
             exit;
         }
@@ -30,7 +30,7 @@
                 unset($_SESSION["email"]);
                 unset($_SESSION["senha"]);
                 echo "O Log In ainda não foi feito.";
-                echo "<p><a href='login.html'>Página de Log In</a></p>";
+                header("Location: login.html");
                 mysqli_close($mysqli);
                 exit;
             }

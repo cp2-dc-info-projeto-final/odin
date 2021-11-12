@@ -20,6 +20,7 @@
             session_start();
             $_SESSION["email"] = $email;
             $_SESSION["senha"] = $usuario["senha"];
+            $_SESSION["login"] = "OK";
             
             header("Location: index.php");
         }
