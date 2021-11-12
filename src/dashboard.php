@@ -14,7 +14,7 @@
     </head>
 
     <body>
-        <header>
+        <header rel="stylesheet" href="_css/style.css">
             <nav>
                 <a class="logo" href="index.php">Odin</a>
 
@@ -32,11 +32,146 @@
             </nav>
         </header>
     
-        <main>
+        <main 
+        rel="stylesheet" 
+        href="_css/styleadm.css"  
+        style=
+        "margin: 250px 200px; 
+        padding: 0; 
+        font-family: Arial, Helvetica, sans-serif; 
+        font-size: 16px;">
             <script src="_js/mobile-navbar.js"></script>
 
-            
-        </main>
+        <section class="flex"> 
+            <div class="card-container">
+                <div class="top">
+                    <div class="image-container">
+                        <img src="./_img/marcoslindo.jpg" alt="">
 
+                    </div>
+                </div>
+
+                <div class="bottom">
+                    <p></p>
+                    <h3> Marcos Gabriel</h3>
+                    <p></p>
+                    <h4> Genio da nano tecnologia</h4>
+                    <p></p>
+                    <p> BRABO SIMPLESMENTE EM TUDO</p>
+                    <a href="#" class="btn"> Checar Perfil</a>
+                    <p></p>
+                    <a href="#" class="btn"> Excluir Perfil</a>
+                    <p></p>
+                    <a href="#" class="btn"> Alterar Informações</a>
+                </div>
+
+                
+            </div>
+
+            <div class="card-container">
+                <div class="top">
+                    <div class="image-container">
+                        <img src="./_img/viking.png" alt="">
+
+                    </div>
+                </div>
+
+                <div class="bottom">
+                    <p></p>
+                    <h3> Marcos Gabriel</h3>
+                    <p></p>
+                    <h4> Genio da nano tecnologia</h4>
+                    <p></p>
+                    <p> BRABO SIMPLESMENTE EM TUDO</p>
+                    <a href="#" class="btn"> Checar Perfil</a>
+                    <p></p>
+                    <a href="#" class="btn"> Excluir Perfil</a>
+                    <p></p>
+                    <a href="#" class="btn"> Alterar Informações</a>
+                </div>
+
+                
+            </div>
+
+            
+            <div class="card-container">
+                <div class="top">
+                    <div class="image-container">
+                        <img src="./_img/viking.png" alt="">
+
+                    </div>
+                </div>
+
+                <div class="bottom">
+                    <p></p>
+                    <h3> Marcos Gabriel</h3>
+                    <p></p>
+                    <h4> Genio da nano tecnologia</h4>
+                    <p></p>
+                    <p> BRABO SIMPLESMENTE EM TUDO</p>
+                    <a href="#" class="btn"> Checar Perfil</a>
+                    <p></p>
+                    <a href="#" class="btn"> Excluir Perfil</a>
+                    <p></p>
+                    <a href="#" class="btn"> Alterar Informações</a>
+                </div>
+
+                
+            </div>
+
+            
+
+            <div class="card-container">
+                <div class="top">
+                    <div class="image-container">
+                        <img src="./_img/viking.png" alt="">
+
+                    </div>
+                </div>
+
+                <div class="bottom">
+                    <p></p>
+                    <h3> Marcos Gabriel</h3>
+                    <p></p>
+                    <h4> Genio da nano tecnologia</h4>
+                    <p></p>
+                    <p> BRABO SIMPLESMENTE EM TUDO</p>
+                    <a href="#" class="btn"> Checar Perfil</a>
+                    <p></p>
+                    <a href="#" class="btn"> Excluir Perfil</a>
+                    <p></p>
+                    <a href="#" class="btn"> Alterar Informações</a>
+                </div>
+
+                
+            </div>
+
+            
+            <div class="card-container">
+                <div class="top">
+                    <div class="image-container">
+                        <img src="./_img/viking.png" alt="">
+
+                    </div>
+                </div>
+
+                <div class="bottom">
+                    <p></p>
+                    <h3> Marcos Gabriel</h3>
+                    <p></p>
+                    <h4> Genio da nano tecnologia</h4>
+                    <p></p>
+                    <p> BRABO SIMPLESMENTE EM TUDO</p>
+                    <a href="#" class="btn"> Checar Perfil</a>
+                    <p></p>
+                    <a href="#" class="btn"> Excluir Perfil</a>
+                    <p></p>
+                    <a href="#" class="btn"> Alterar Informações</a>
+                </div>
+
+                
+            </div>
+        </section>
+        </main>
     </body>
 </html>
