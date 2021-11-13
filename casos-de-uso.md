@@ -11,6 +11,7 @@
 ## Lista dos Atores
 
  - Usuário 
+ - Administrador
 
 ## Diagrama de Casos de Uso
 
