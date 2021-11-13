@@ -22,7 +22,7 @@ O público-alvo do projeto são pessoas com interesse em compartilhar produtos n
 
 **Diagrama de Classes**
 
-![Diagrama de Classes](Digrama_Casos_Uso.png)
+![Diagrama de Classes](diagrana-exemplo.png)
 
 **Modelagem do Banco de Dados**
 
