@@ -42,6 +42,7 @@
         font-family: Arial, Helvetica, sans-serif; 
         font-size: 16px;">
             <script src="_js/mobile-navbar.js"></script>
+            <script src="_js/excluir.js"></script>
 
             <section class="flex">
                 <?php
@@ -74,7 +75,7 @@
                             echo "<p></p>
                                 <a href='editar.php?id=".$usuario["id"]."' class='btn'> Alterar Informações</a>
                                 <p></p>
-                                <a href='excluir.php?id=".$usuario["id"]."' class='btn'> Excluir Perfil</a>";
+                                <a onclick='confirmarExclusao(".$usuario["id"].")' class='btn'> Excluir Perfil</a>";
                         }
                         echo "</div>
                         </div>";

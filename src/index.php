@@ -28,14 +28,19 @@
         </div>
 
       <div class="search-box">
-        <form action = "operador.php" method = "POST">
-          <input type="hidden" name="operacao" value="buscar">
+        <form action = "busca.php" method = "POST">
+          <input type = "hidden" name = "operacao" value = "buscar">
           <input class="search-txt" type="text" name = "busca" placeholder="Pesquise Aqui">
         </form>
-    </div> 
+      </div>
+
         <ul class="nav-list">
           <li><a href="#">Perfil</a></li>
-          <li><a href="#">Amigos</a></li>
+          <?php
+            if ($usuario["adm"] == 1){
+              echo "<li><a href='dashboard.php'>Dashboard</a></li>";
+            }
+          ?>
           <li><a href="editar.php">Editar usuário</a></li>
           <li><a onclick="confirmarSaida()">Sair</a></li>
         </ul>

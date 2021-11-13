@@ -4,13 +4,17 @@
     include "mysqli_connect.inc";
 
     $sql = "DELETE FROM usuarios WHERE id = '$id';";
+    mysqli_query($mysqli, $sql);
+    $sql = "SELECT * FROM usuarios WHERE id = '$id'";
     $res = mysqli_query($mysqli, $sql);
+    $linhas = mysqli_num_rows($res);
 
-    if (mysqli_num_rows($res) != 0){
+    if ($linhas != 0){
         echo "Erro ao apagar!";
-        echo "<a href = 'dashboard.php'>Retornar ao dashboard</a>";
+        header("Location: index.php");
     }else{
         echo "Excluído com sucesso!";
-        header("Location: dashboard.php");
+        header("Location: index.php");
     }
+    mysqli_close($mysqli);
 ?>

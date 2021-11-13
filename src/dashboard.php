@@ -10,12 +10,13 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Odin - Edição de usuário</title>
+        <title>Odin - Dashboard</title>
         <link rel="stylesheet" href="_css/style.css" />
     </head>
 
     <body>
         <header rel="stylesheet" href="_css/style.css">
+            <script src="_js/logout.js"></script>
             <nav>
                 <a class="logo" href="index.php">Odin</a>
 
@@ -28,7 +29,7 @@
                 <ul class="nav-list">
                     <li><a href="index.php">Home</a></li>
                     <li><a href="#">Perfil</a></li>
-                    <li><a href="logout.php">Sair</a></li>
+                    <li><a onclick="confirmarSaida()">Sair</a></li>
                 </ul>
             </nav>
         </header>
@@ -42,6 +43,7 @@
         font-family: Arial, Helvetica, sans-serif; 
         font-size: 16px;">
             <script src="_js/mobile-navbar.js"></script>
+            <script src="_js/excluir.js"></script>
 
             <section class="flex">
                 <?php
@@ -69,7 +71,7 @@
                             echo "<p></p>
                                 <a href='editar.php?id=".$usuario["id"]."' class='btn'> Alterar Informações</a>
                                 <p></p>
-                                <a href='excluir.php?id=".$usuario["id"]."' class='btn'> Excluir Perfil</a>";
+                                <a onclick='confirmarExclusao(".$usuario["id"].")' class='btn'> Excluir Perfil</a>";
                         }
                         echo "</div>
                         </div>";
