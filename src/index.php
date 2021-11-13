@@ -9,6 +9,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/c22820d043.js" crossorigin="anonymous"></script>
     <title>Odin</title>
     <link rel="stylesheet" href="_css/style.css" />
   </head>
@@ -26,13 +27,12 @@
           <div class="line4"></div>
         </div>
 
-        <div class="search-box">
-          <form action = "operador.php" method = "POST">
-            <input type="hidden" name="operacao" value="buscar">
-            <input class="search-txt" type="text" name = "busca" placeholder="Pesquise Aqui">
-          </form>
-        </div>
-                
+      <div class="search-box">
+        <form action = "operador.php" method = "POST">
+          <input type="hidden" name="operacao" value="buscar">
+          <input class="search-txt" type="text" name = "busca" placeholder="Pesquise Aqui">
+        </form>
+    </div> 
         <ul class="nav-list">
           <li><a href="#">Perfil</a></li>
           <li><a href="#">Amigos</a></li>
