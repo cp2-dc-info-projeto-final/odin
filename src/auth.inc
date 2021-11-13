@@ -26,6 +26,8 @@
         }
         else{
             $usuario = mysqli_fetch_array($res);
+            $_SESSION["id"] = $usuario["id"];
+            $_SESSION["adm"] = $usuario["adm"];
             if(!hash_equals($usuario["senha"], $senha)){
                 unset($_SESSION["email"]);
                 unset($_SESSION["senha"]);

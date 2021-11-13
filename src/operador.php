@@ -16,6 +16,7 @@
         $senha = $_POST["senha"];
         $csenha = $_POST["csenha"];
         $telefone = $_POST["telefone"];
+        $adm = (isset($_POST["adm"])) ? 1 : 0;
 
         $sql = "SELECT * FROM usuarios WHERE id = '$id';";
         $res = mysqli_query($mysqli, $sql);
@@ -85,7 +86,7 @@
 
         if ($erro == 0){
             $senha_cripto = password_hash($senha, PASSWORD_DEFAULT);
-            $sql = "UPDATE usuarios SET nome = '$nome', sobrenome = '$sobrenome', datanasc = '$datanasc', email = '$email', senha = '$senha_cripto', telefone = '$telefone' ";
+            $sql = "UPDATE usuarios SET nome = '$nome', sobrenome = '$sobrenome', datanasc = '$datanasc', email = '$email', senha = '$senha_cripto', telefone = '$telefone', adm = '$adm' ";
             $sql .= "WHERE id = $id;";
             mysqli_query($mysqli,$sql);
             echo "Atualização bem-sucedida. <br>";
@@ -100,17 +101,17 @@
         $sql = "SELECT * FROM usuarios WHERE nome like '%$busca%' OR sobrenome like '%$busca%';";
         $res = mysqli_query($mysqli,$sql);
         $linhas = mysqli_num_rows($res);
+        if ($linhas == 0){
+            echo "Não há resultados para sua pesquisa.";
+        }
         for($i = 0; $i < $linhas; $i++){
-            $usuariob = mysqli_fetch_array($res);
-            echo "<a href='pag_perfil.php?id=".$usuariob["id"]."'>" .$usuariob["nome"]. " " .$usuariob["sobrenome"]. "</a><br>";
-            echo "Email: " .$usuariob["email"]. "<br>";
-            echo "Telefone: " .$usuariob["telefone"]. "<br>";
-            if ($usuario["adm"] == 1 || $usuario["id"] == $usuariob["id"]){
-                echo "<a href='editar.php?id=".$usuariob["id"]."'>Editar usuário</a><br>";
-                echo "<a href='excluir.php?id=".$usuariob["id"]."'>Excluir usuário</a><br>";
-            }
-            if ($usuario["adm"] == 1){
-                echo "<input type = 'checkbox'>Promover/Rebaixar administrador<br>";
+            $usuario = mysqli_fetch_array($res);
+            echo "<a href='pag_perfil.php?id=".$usuario["id"]."'>" .$usuario["nome"]. " " .$usuario["sobrenome"]. "</a><br>";
+            echo "Email: " .$usuario["email"]. "<br>";
+            echo "Telefone: " .$usuario["telefone"]. "<br>";
+            if ($_SESSION["adm"] == 1 || $_SESSION["id"] == $usuario["id"]){
+                echo "<a href='editar.php?id=".$usuario["id"]."'>Editar usuário</a><br>";
+                echo "<a href='excluir.php?id=".$usuario["id"]."'>Excluir usuário</a><br>";
             }
             echo "----------------------------------<br>";
         }
@@ -120,17 +121,14 @@
         $res = mysqli_query($mysqli,$sql);
         $linhas = mysqli_num_rows($res);
         for($i=0; $i < $linhas; $i++){
-            $usuariob = mysqli_fetch_array($res);
-            echo "<a href='pag_perfil.php?id=".$usuariob["id"]."'>" .$usuariob["nome"]. " " .$usuariob["sobrenome"]. "</a><br>";
-            echo "Data de nascimento: " .$usuariob["datanasc"]. "<br>";
-            echo "Email: " .$usuariob["email"]. "<br>";
-            echo "Telefone: " .$usuariob["telefone"]. "<br>";
-            if ($usuario["adm"] == 1 || $usuario["id"] == $usuariob["id"]){
-                echo "<a href='editar.php?id=".$usuariob["id"]."'>Editar usuário</a><br>";
-                echo "<a href='excluir.php?id=".$usuariob["id"]."'>Excluir usuário</a><br>";
-            }
-            if ($usuario["adm"] == 1){
-                echo "<input type = 'checkbox'>Promover/Rebaixar administrador<br>";
+            $usuario = mysqli_fetch_array($res);
+            echo "<a href='pag_perfil.php?id=".$usuario["id"]."'>" .$usuario["nome"]. " " .$usuario["sobrenome"]. "</a><br>";
+            echo "Data de nascimento: " .$usuario["datanasc"]. "<br>";
+            echo "Email: " .$usuario["email"]. "<br>";
+            echo "Telefone: " .$usuario["telefone"]. "<br>";
+            if ($_SESSION["adm"] == 1 || $_SESSION["id"] == $usuario["id"]){
+                echo "<a href='editar.php?id=".$usuario["id"]."'>Editar usuário</a><br>";
+                echo "<a href='excluir.php?id=".$usuario["id"]."'>Excluir usuário</a><br>";
             }
             echo "----------------------------------<br>";
         }

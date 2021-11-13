@@ -45,9 +45,14 @@
 
             <section class="flex">
                 <?php
-                    $sql = "SELECT * FROM usuarios;";
+                    $busca = $_POST["busca"];
+
+                    $sql = "SELECT * FROM usuarios WHERE nome like '%$busca%' OR sobrenome like '%$busca%';";
                     $res = mysqli_query($mysqli,$sql);
                     $linhas = mysqli_num_rows($res);
+                    if ($linhas == 0){
+                        echo "Não há resultados para sua pesquisa.";
+                    }
                     for($i=0; $i < $linhas; $i++){
                         $usuario = mysqli_fetch_array($res);
                         echo "<div class='card-container'>

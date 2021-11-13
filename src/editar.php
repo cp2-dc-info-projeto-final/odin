@@ -48,6 +48,15 @@
                     <p>Nova senha: <input type="password" name="senha" maxlength="20" minlength="8" required="required"></p>
                     <p>Confirme sua nova senha: <input type="password" name="csenha" maxlength="20" minlength="8" required="required"></p>
                     <p>Telefone (celular): <input type="tel" name="telefone" pattern="[0-9]{2}[9]{1}[0-9]{8}$" required="required" value="<?php echo $usuario["telefone"]?>"></p>
+                    <?php
+                        if ($_SESSION["adm"] == 1){
+                            if ($usuario["adm"] == 1){
+                                echo "<p><input type = 'checkbox' name='adm' checked='checked'>Promover/Rebaixar administrador</p>";
+                            }else{
+                                echo "<p><input type = 'checkbox' name='adm'>Promover/Rebaixar administrador</p>";
+                            }
+                        }
+                    ?>
                     <input type="submit" value="Atualizar">
                 </form>
             </div>
