@@ -6,6 +6,10 @@
  - [CDU 02](#CDU-02): Logout
  - [CDU 03](#CDU-03): Cadastrar 
  - [CDU 04](#CDU-04): Editar usuário
+ - [CDU 05](#CDU-05): lista de usuários (dashboard do administrador)
+ - [CDU 06](#CDU-06): editar usuário(administrador)
+ - [CDU 07](#CDU-07): excluir usuário (administrador)
+ - [CDU 08](#CDU-08): sistema de busca por palavra chave
 
 
 ## Lista dos Atores
@@ -256,4 +260,66 @@ Caso de uso: editar usuário
 
 4- O usuário clica no botão atualizar 
 
-5- O sistema encaminhara o usuário para tela de login 
+5- O sistema encaminhara o usuário para tela de login
+
+###CDU05
+
+Caso de uso: lista de usuários (dashboard do administrador) 
+
+**FLUXO PRINCIPAL**  
+
+1- O sistema exibirá um botão que acessa a dashboard 
+
+2- O administrador clicará no botão 
+
+3- O sistema direcionará o administrador para uma página com uma lista de todos os usuários
+
+###CDU06
+
+Caso de uso: editar usuário(administrador) 
+
+**FLUXO PRINCIPAL** 
+
+1- O sistema apresenta um formulário com campos e-mail, nome, sobrenome, sua senha atual, nova senha, confirma sua nova senha, data de nascimento, telefone(celular) e promover usuário 
+
+2- O administrador atualiza os dados pessoais e clicar no botão atualizar 
+
+3- O sistema armazena as informações do usuário no banco de dados   
+
+4- O sistema encaminha o usuário para tela de login 
+
+**FLUXO ALTERNATIVO A** 
+
+1- Se o administrador não preencher o qualquer campo corretamente o sistema irá informa-lo que o campo precisa ser preenchido corretamente   
+
+2- O administrador preenchera o campo corretamente 
+
+3- O administrador clica no botão atualizar 
+
+4- O sistema encaminhara para tela de login  
+
+###CDU07
+
+Caso de uso: excluir usuário (administrador) 
+
+**FLUXO PRINCIPAL** 
+
+1- O sistema exibirá um botão que acessa a dashboard 
+
+2- O administrador clicará no botão 
+
+3- O sistema direcionará o administrador para uma página com uma lista de todos os usuários 
+
+4- Onde o administrador poderá excluir usuários  
+
+###CDU08
+
+Caso de uso: sistema de busca por palavra chave  
+
+**FLUXO PRINCIPAL** 
+
+1- O sistema terá uma barra de pesquisa 
+
+2- O administrador pesquisará a palavra-chave desejada  
+
+3- O sistema exibirá usuários relacionados à palavra-chave 
