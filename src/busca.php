@@ -16,6 +16,7 @@
 
     <body>
         <header rel="stylesheet" href="_css/style.css">
+            <script src="_js/logout.js"></script>
             <nav>
                 <a class="logo" href="index.php">Odin</a>
 
@@ -28,7 +29,7 @@
                 <ul class="nav-list">
                     <li><a href="index.php">Home</a></li>
                     <li><a href="#">Perfil</a></li>
-                    <li><a href="logout.php">Sair</a></li>
+                    <li><a onclick="confirmarSaida()">Sair</a></li>
                 </ul>
             </nav>
         </header>

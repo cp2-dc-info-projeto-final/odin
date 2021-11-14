@@ -15,6 +15,8 @@
 
   <body>
     <header>
+      <script src="_js/logout.js"></script>
+
       <nav class="navbar fixed-top navbar-expand-sm 
       navbar-dark bg-dark">
 
@@ -44,11 +46,15 @@
                 Perfil
               </a>
             </li>
-            <li class="nav-item active">
-              <a href="#" class="nav-link">
-                Amigos
-              </a>
-            </li>
+            <?php
+              if ($_SESSION["adm"] == 1){
+                echo '<li class="nav-item active">
+                  <a href="dashboard.php" class="nav-link">
+                    Dashboard
+                  </a>
+                </li>';
+              }
+            ?>
             <li class="nav-item dropdown">
               <a href="#" class="nav-link 
               dropdown-toggle" 
@@ -61,23 +67,16 @@
               </a>
               <ul class="dropdown-menu"
               aria-labelledby="navbarDropdown">
-                <li><a href="editar.php" 
-                  class="dropdown-item">Editar Usuario</a></li>
-                <li><a href="#" 
-                  class="dropdown-item">Ajuda e Suporte</a></li>
-                <li><a href="#" 
-                  class="dropdown-item">Sair</a></li>
-
+                <li><a href="editar.php" class="dropdown-item">Editar Usuario</a></li>
+                <li><a href="#" class="dropdown-item">Ajuda e Suporte</a></li>
+                <li><a onclick="confirmarSaida()" class="dropdown-item">Sair</a></li>
               </ul>
             </li>
           </ul>          
         </div>
-        <form class="d-flex">
-          <input type="text" class="form-control me-2">
-          <button 
-          type="submit" class="btn btn-primary custom-btn" style="color: white;">Procurar</button>
-            Procurar
-          </button>
+        <form class="d-flex" action="busca.php" method="POST">
+          <input type="text" class="form-control me-2" name="busca">
+          <button type="submit" class="btn btn-primary custom-btn" style="color: white;">Procurar</button>
         </form>
       </nav>
 
