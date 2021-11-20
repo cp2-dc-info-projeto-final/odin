@@ -93,8 +93,8 @@
                 <div class="imgUser"></div>
                 <strong><?php echo $usuario["nome"] . " " . $usuario["sobrenome"]; ?></strong>
             </div>    
-                <form action="" class="formPost">
-                    <textarea name="textarea" placeholder="Mostre seus produtos !!!"></textarea>
+                <form action="post.php" class="formPost" method="POST">
+                    <textarea name="texto" placeholder="Mostre seus produtos !!!"></textarea>
                     
                     <div class="iconsAndButton">
                         <div class="icons">
@@ -108,75 +108,41 @@
       </div>
       
       <ul class="posts">
-        <li class="post">
-          <div class="infoUserPost">
-            <div class="imgUserPost"></div>
-              
-            <div class="nameAndHour">
-              <strong>Erick Silva</strong>
-              <p>14h</p>
-            </div>
-          </div>
-        <p>
-          Queria compartilhar o quão barato está o PS6 e a placa de vídeo 4090, estão por somente 10 reais aqui na Lucas'bazar 
-          sim e essa é a ultima chance de você conseguir esses produtos por esses preços e na compra dos dois você ganha 
-          um xbox series Z venha logo a Rua outubro melhor mês N 666
-        </p>
-        <div class="actionBtnPost">
-          <button type="button" class="filesPost like"><img src="./assets/heart.svg" alt="Curtir">Curtir</button>
-          <button type="button" class="filesPost comment"><img src="./assets/comment.svg" alt="Comentar">Comentar</button>
-          <button type="button" class="filesPost share"><img src="./assets/share.svg" alt="Compartilhar">Compartilhar</button>
-          <button type="button" class="filesPost like">Excluir</button>
+        <?php
+          $sql = "SELECT * FROM posts ORDER BY data_hora DESC;";
+          $res = mysqli_query($mysqli,$sql);
+          $linhas = mysqli_num_rows($res);
+          for ($i = 0; $i < $linhas; $i++){
+            $post = mysqli_fetch_array($res);
+            $sqluser = "SELECT * FROM usuarios WHERE id = " .$post["id_usuario"]. ";";
+            $resuser = mysqli_query($mysqli,$sqluser);
+            $postuser = mysqli_fetch_array($resuser);
+            echo '<li class="post">
+              <div class="infoUserPost">
+                <div class="imgUserPost"><!-- <img src="_img/viking.png">--> </div>
+                  
+                <div class="nameAndHour">
+                  <strong>' .$postuser["nome"]. ' ' .$postuser["sobrenome"]. '</strong>
+                  <p>' .$post["data_hora"]. '</p>
+                </div>
+              </div>
 
-        </div>
-
-        </li>
-        
-        <li class="post">
-          <div class="infoUserPost">
-            <div class="imgUserPost"></div>
-              
-            <div class="nameAndHour">
-              <strong>Erick Silva</strong>
-              <p>14h</p>
-            </div>
-          </div>
-        <p>
-          Queria compartilhar o quão barato está o PS6 e a placa de vídeo 4090, estão por somente 10 reais aqui na Lucas'bazar 
-          sim e essa é a ultima chance de você conseguir esses produtos por esses preços e na compra dos dois você ganha 
-          um xbox series Z venha logo a Rua outubro melhor mês N 666
-        </p>
-        <div class="actionBtnPost">
-          <button type="button" class="filesPost like"><img src="./assets/heart.svg" alt="Curtir">Curtir</button>
-          <button type="button" class="filesPost comment"><img src="./assets/comment.svg" alt="Comentar">Comentar</button>
-          <button type="button" class="filesPost share"><img src="./assets/share.svg" alt="Compartilhar">Compartilhar</button>
-          <button type="button" class="filesPost like">Excluir</button>
-        </div>
-
-        </li>
-        <li class="post">
-          <div class="infoUserPost">
-            <div class="imgUserPost"></div>
-              
-            <div class="nameAndHour">
-              <strong>Erick Silva</strong>
-              <p>14h</p>
-            </div>
-          </div>
-        <p>
-          Queria compartilhar o quão barato está o PS6 e a placa de vídeo 4090, estão por somente 10 reais aqui na Lucas'bazar 
-          sim e essa é a ultima chance de você conseguir esses produtos por esses preços e na compra dos dois você ganha 
-          um xbox series Z venha logo a Rua outubro melhor mês N 666
-        </p>
-        <div class="actionBtnPost">
-          <button type="button" class="filesPost like"><img src="./assets/heart.svg" alt="Curtir">Curtir</button>
-          <button type="button" class="filesPost comment"><img src="./assets/comment.svg" alt="Comentar">Comentar</button>
-          <button type="button" class="filesPost share"><img src="./assets/share.svg" alt="Compartilhar">Compartilhar</button>
-          <button type="button" class="filesPost like">Excluir</button>
-        </div>
-
-        </li>
+            <p>' .$post["texto"]. '</p>
+            <img src="' .$post["midia"]. '">
+            <div class="actionBtnPost">
+              <button type="button" class="filesPost like"><img src="./assets/heart.svg" alt="Curtir">Curtir</button>
+              <button type="button" class="filesPost comment"><img src="./assets/comment.svg" alt="Comentar">Comentar</button>';
+              if ($_SESSION["id"] == $postuser["id"]){
+                echo '<button type="button" class="filesPost share">Editar</button>';
+              };
+              if ($_SESSION["adm"] == 1 || $_SESSION["id"] == $postuser["id"]){
+                 echo '<button type="button" class="filesPost like">Excluir</button>';
+              };
+            echo '</div></li>';
+          }
+        ?>
       </ul>
     </main>
   </body>
+  <?php mysqli_close($mysqli); ?>
 </html>
