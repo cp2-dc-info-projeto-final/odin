@@ -1,8 +1,10 @@
 <?php
     $id = $_GET["id"];
+    $midia = $_GET["midia"];
 
     include "mysqli_connect.inc";
 
+    unlink($midia);
     $sql = "DELETE FROM posts WHERE id = '$id';";
     mysqli_query($mysqli, $sql);
     $sql = "SELECT * FROM posts WHERE id = '$id'";

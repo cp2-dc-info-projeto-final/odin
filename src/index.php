@@ -139,7 +139,7 @@
                 echo '<button type="button" class="filesPost share">Editar</button>';
               };
               if ($_SESSION["adm"] == 1 || $_SESSION["id"] == $postuser["id"]){
-                 echo '<button type="button" class="filesPost like" onclick="excluirPost('.$post["id"].')">Excluir</button>';
+                 echo '<button type="button" class="filesPost like" onclick="excluirPost('.$post["id"].', ' .$post["midia"]. ')">Excluir</button>';
               };
             echo '</div></li>';
           }
