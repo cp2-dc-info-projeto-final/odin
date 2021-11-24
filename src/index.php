@@ -85,6 +85,7 @@
 
     <main class="main">
       <script src="_js/mobile-navbar.js"></script>
+      <script src="_js/excluirpost.js"></script>
 
       <!---Formulario de Postagens-->
       <li style="height: 50px;"></li>
@@ -93,12 +94,12 @@
                 <div class="imgUser"></div>
                 <strong><?php echo $usuario["nome"] . " " . $usuario["sobrenome"]; ?></strong>
             </div>    
-                <form action="post.php" class="formPost" method="POST">
+                <form action="post.php" class="formPost" method="POST" enctype="multipart/form-data">
                     <textarea name="texto" placeholder="Mostre seus produtos !!!"></textarea>
                     
                     <div class="iconsAndButton">
                         <div class="icons">
-                            <button class="btnFileForm"><img src="./assets/img.svg" alt="Adicionar uma imagem"></button>
+                            <input class="btnFileForm" type="file" name="img"><img src="./assets/img.svg" alt="Adicionar uma imagem"></input>
                             <button class="btnFileForm"><img src="./assets/gif.svg" alt="Adicionar um gif"></button>
                             <button class="btnFileForm"><img src="./assets/video.svg" alt="Adicionar um video"></button>
                         </div>
@@ -109,7 +110,7 @@
       
       <ul class="posts">
         <?php
-          $sql = "SELECT * FROM posts ORDER BY data_hora DESC;";
+          $sql = "SELECT * FROM posts ORDER BY id DESC;";
           $res = mysqli_query($mysqli,$sql);
           $linhas = mysqli_num_rows($res);
           for ($i = 0; $i < $linhas; $i++){
@@ -117,18 +118,20 @@
             $sqluser = "SELECT * FROM usuarios WHERE id = " .$post["id_usuario"]. ";";
             $resuser = mysqli_query($mysqli,$sqluser);
             $postuser = mysqli_fetch_array($resuser);
+            $data_hora = new DateTime($post["data_hora"]);
+            $data_hora = $data_hora->format("d/m/Y H:i");
             echo '<li class="post">
               <div class="infoUserPost">
                 <div class="imgUserPost"><!-- <img src="_img/viking.png">--> </div>
                   
                 <div class="nameAndHour">
                   <strong>' .$postuser["nome"]. ' ' .$postuser["sobrenome"]. '</strong>
-                  <p>' .$post["data_hora"]. '</p>
+                  <p>' .$data_hora. '</p>
                 </div>
               </div>
 
             <p>' .$post["texto"]. '</p>
-            <img src="' .$post["midia"]. '">
+            <img style="width: 100%; margin-bottom: 10px; border-radius: 2.5%" src="' .$post["midia"]. '">
             <div class="actionBtnPost">
               <button type="button" class="filesPost like"><img src="./assets/heart.svg" alt="Curtir">Curtir</button>
               <button type="button" class="filesPost comment"><img src="./assets/comment.svg" alt="Comentar">Comentar</button>';
@@ -136,7 +139,7 @@
                 echo '<button type="button" class="filesPost share">Editar</button>';
               };
               if ($_SESSION["adm"] == 1 || $_SESSION["id"] == $postuser["id"]){
-                 echo '<button type="button" class="filesPost like">Excluir</button>';
+                 echo '<button type="button" class="filesPost like" onclick="excluirPost('.$post["id"].')">Excluir</button>';
               };
             echo '</div></li>';
           }

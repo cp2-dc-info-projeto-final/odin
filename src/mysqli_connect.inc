@@ -1,3 +1,3 @@
 <?php
-    $mysqli = mysqli_connect("localhost","root","","odin");
+    $mysqli = mysqli_connect("localhost","viking","valhalla","odin");
 ?>
