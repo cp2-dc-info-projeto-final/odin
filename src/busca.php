@@ -60,7 +60,7 @@
                         echo "<div class='card-container'>
                             <div class='top'>
                                 <div class='image-container'>
-                                    <img src='_img/viking.png' alt=''>
+                                    <img src=" .$usuario["fotoperfil"]. " style='width: 100%; border-radius: 50%'>
                                 </div>
                             </div>
 

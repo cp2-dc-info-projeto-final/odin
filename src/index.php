@@ -42,9 +42,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a href="#" class="nav-link active">
-                Perfil
-              </a>
+              <a href="pag_perfil.php" class="nav-link active">Perfil</a>
             </li>
             <?php
               if ($_SESSION["adm"] == 1){
@@ -91,7 +89,7 @@
       <li style="height: 50px;"></li>
       <div class="newPost">
           <div class="infoUser">
-                <div class="imgUser"></div>
+                <div class="imgUser"><img src="<?php echo $usuario["fotoperfil"]; ?>" style="width: 100%; border-radius: 50%"></div>
                 <strong><?php echo $usuario["nome"] . " " . $usuario["sobrenome"]; ?></strong>
             </div>    
                 <form action="post.php" class="formPost" method="POST" enctype="multipart/form-data">
@@ -122,7 +120,7 @@
             $data_hora = $data_hora->format("d/m/Y H:i");
             echo '<li class="post">
               <div class="infoUserPost">
-                <div class="imgUserPost"><!-- <img src="_img/viking.png">--> </div>
+                <div class="imgUserPost"><img src="' .$postuser["fotoperfil"]. '" style="width: 100%; border-radius: 50%"></div>
                   
                 <div class="nameAndHour">
                   <strong>' .$postuser["nome"]. ' ' .$postuser["sobrenome"]. '</strong>
@@ -135,12 +133,13 @@
             <div class="actionBtnPost">
               <button type="button" class="filesPost like"><img src="./assets/heart.svg" alt="Curtir">Curtir</button>
               <button type="button" class="filesPost comment"><img src="./assets/comment.svg" alt="Comentar">Comentar</button>';
-              if ($_SESSION["id"] == $postuser["id"]){
-                echo '<button type="button" class="filesPost share">Editar</button>';
-              };
+              if ($_SESSION["id"] == $postuser["id"]){ ?>
+                <button type="button" class="filesPost share" onclick="location.href='editarpost.php?id=<?php echo $post["id"]; ?>'">Editar</button>
+              <?php
+              }
               if ($_SESSION["adm"] == 1 || $_SESSION["id"] == $postuser["id"]){
-                 echo '<button type="button" class="filesPost like" onclick="excluirPost('.$post["id"].', ' .$post["midia"]. ')">Excluir</button>';
-              };
+                echo '<button class="filesPost like" onclick="excluirPost('.$post["id"].', ' .$post["midia"]. ')">Excluir</button>';
+              }
             echo '</div></li>';
           }
         ?>

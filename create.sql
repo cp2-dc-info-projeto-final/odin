@@ -21,7 +21,7 @@ CREATE TABLE usuarios (
     email varchar(30) NOT NULL,
     senha varchar(300) NOT NULL,
     telefone char(11) NOT NULL,
-    fotoperfil varchar(200),
+    fotoperfil varchar(200) DEFAULT "_img/viking.png",
     adm tinyint(1) NOT NULL DEFAULT 0
 );
 
@@ -48,7 +48,7 @@ CREATE TABLE curtepost (
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     id_usuario int NOT NULL,
     id_post int NOT NULL,
-    curtida tinyint(1) NOT NULL DEFAULT 0
+    curtida tinyint(1) NOT NULL DEFAULT 0,
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id),
     FOREIGN KEY (id_post) REFERENCES posts(id)
 );
@@ -57,14 +57,14 @@ CREATE TABLE curtecomment (
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     id_usuario int NOT NULL,
     id_comment int NOT NULL,
-    curtida tinyint(1) NOT NULL DEFAULT 0
+    curtida tinyint(1) NOT NULL DEFAULT 0,
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id),
     FOREIGN KEY (id_comment) REFERENCES comentarios(id)
 );
 
 INSERT INTO `usuarios` (`id`, `nome`, `sobrenome`, `datanasc`, `email`, `senha`, `telefone`, `fotoperfil`, `adm`) VALUES
-    (1, 'ADM', 'root', '2000-01-01', 'adm@gmail.com', '$2y$10$.Ofx2Az5gyQ7P08Xij5eZumg1XNXH4aBIueWDFZZeRJdxwXmAesXS', '21912345678', NULL, 1),
-    (2, 'Teste', 'root', '2000-01-01', 'teste@gmail.com', '$2y$10$.N5LSgYTsL9nhthWQSdDrO8/HdnjdfYajKEbN67gi1Hsv9R2F0.8u', '21912345678', NULL, 0);
+    (1, 'ADM', 'root', '2000-01-01', 'adm@gmail.com', '$2y$10$.Ofx2Az5gyQ7P08Xij5eZumg1XNXH4aBIueWDFZZeRJdxwXmAesXS', '21912345678', '_img/viking.png', 1),
+    (2, 'Teste', 'root', '2000-01-01', 'teste@gmail.com', '$2y$10$.N5LSgYTsL9nhthWQSdDrO8/HdnjdfYajKEbN67gi1Hsv9R2F0.8u', '21912345678', '_img/viking.png', 0);
 
 INSERT INTO `posts` (`id`, `id_usuario`, `data_hora`, `texto`, `midia`) VALUES
     (11, 1, '2021-11-23 22:08:00', 'Teste com imagem sÃ³ pra manter a regularidade com e sem', ''),
