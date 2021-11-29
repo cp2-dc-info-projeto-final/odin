@@ -10,6 +10,11 @@
  - [CDU 06](#CDU-06): editar usuário(administrador)
  - [CDU 07](#CDU-07): excluir usuário (administrador)
  - [CDU 08](#CDU-08): sistema de busca por palavra chave
+ - [CDU 09](#CDU-09): criar postagens
+ - [CDU 10](#CDU-10): editar postagens
+ - [CDU 11](#CDU-11): excluir postagens
+ - [CDU 12](#CDU-12): timeline do usuário
+
 
 
 ## Lista dos Atores
@@ -323,3 +328,69 @@ Caso de uso: sistema de busca por palavra chave
 2- O administrador pesquisará a palavra-chave desejada  
 
 3- O sistema exibirá usuários relacionados à palavra-chave 
+
+### CDU09
+
+Casos de uso: criar postagens 
+
+**FLUXO PRINCIPAl**  
+
+1- O sistema apresentara um formulário com a possibilidade de escrever e postar fotos 
+
+2- O usuário poderá escrever preencherá esse formulário e clicará em publicar  
+
+3- O sistema irá armazenar e exibirá a postagem no menu principal e timeline do próprio usuário
+
+### CDU10
+
+Casos de uso: editar postagens 
+
+**FLUXO PRINCIPAL** 
+
+1- O sistema apresentará um botão de editar postagem para o usuário que fez a postagem 
+
+2- O usuário clicará em editar e ele irá poder editar sua postagem 
+
+3- O usuário preencherá esse formulário e clicará em editar 
+
+4- O sistema irá armazenar e exibirá a postagem no menu principal e timeline do próprio usuário 
+
+### CDU11
+
+Casos de uso: excluir postagens
+
+**FLUXO PRINCIPAL**
+
+1- O sistema apresentará um botão de excluir postagem para o usuário que fez a postagem 
+
+2- O usuário clicará em excluir e ele irá excluir sua postagem  
+
+3- O sistema irá confirma se o usuário quer excluir essa postagem 
+
+4- O usuário clica no botão confirma 
+
+5- O sistema acessará o banco de dados e irá excluir a postagem 
+
+**FLUXO ALTERNATIVO A** 
+
+1- O sistema apresentará um botão de excluir postagem para o usuário que fez a postagem 
+
+2- O usuário clicará em excluir e ele irá excluir sua postagem 
+
+3- O sistema irá confirma se o usuário quer excluir essa postagem 
+
+4- O usuário clica no botão cancelar  
+
+5- O sistema irá armazena e exibirá a postagem no menu principal e timeline do próprio usuário
+ 
+### CDU12
+ 
+Casos de uso: timeline de usuário  
+
+**FLUXO PRINCIPAL**	 
+
+1- O sistema exibirá um formulário para as postagens  
+
+2- As postagens dos outros usuários  
+
+3- O sistema apresentará no menu principal uma timeline com todas as postagens dos usuários  
