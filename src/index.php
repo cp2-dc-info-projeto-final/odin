@@ -84,6 +84,7 @@
     <main class="main">
       <script src="_js/mobile-navbar.js"></script>
       <script src="_js/excluirpost.js"></script>
+      <script src="_js/linkeditar.js"></script>
 
       <!---Formulario de Postagens-->
       <li style="height: 50px;"></li>
@@ -133,12 +134,11 @@
             <div class="actionBtnPost">
               <button type="button" class="filesPost like"><img src="./assets/heart.svg" alt="Curtir">Curtir</button>
               <button type="button" class="filesPost comment"><img src="./assets/comment.svg" alt="Comentar">Comentar</button>';
-              if ($_SESSION["id"] == $postuser["id"]){ ?>
-                <button type="button" class="filesPost share" onclick="location.href='editarpost.php?id=<?php echo $post["id"]; ?>'">Editar</button>
-              <?php
+              if ($_SESSION["id"] == $postuser["id"]){
+                echo '<button type="button" class="filesPost share" onclick="editarPost(' .$post["id"]. ')">Editar</button>';
               }
               if ($_SESSION["adm"] == 1 || $_SESSION["id"] == $postuser["id"]){
-                echo '<button class="filesPost like" onclick="excluirPost('.$post["id"].', ' .$post["midia"]. ')">Excluir</button>';
+                echo '<button type="button" class="filesPost like" onclick="excluirPost('.$post["id"].')">Excluir</button>';
               }
             echo '</div></li>';
           }

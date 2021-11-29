@@ -1,10 +1,13 @@
 <?php
-    $id = $_GET["id"];
-    $midia = $_GET["midia"];
-
     include "mysqli_connect.inc";
 
-    unlink($midia);
+    $id = $_GET["id"];
+    $sql = "SELECT * FROM posts WHERE id = $id;";
+    $res = mysqli_query($mysqli,$sql);
+    $post = mysqli_fetch_array($res);
+
+    unlink($post["midia"]);
+
     $sql = "DELETE FROM posts WHERE id = '$id';";
     mysqli_query($mysqli, $sql);
     $sql = "SELECT * FROM posts WHERE id = '$id'";
