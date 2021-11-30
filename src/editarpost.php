@@ -56,9 +56,10 @@
                         <form action="editpost.php" class="formPost" method="POST" enctype="multipart/form-data">
                             <input type="hidden" name = "id" value = "' .$post["id"]. '">
                             <input type="hidden" name = "midia" value = "' .$post["midia"]. '">
+                            <input type="hidden" name="oldtext" value="' .$post["texto"]. '">
                             <textarea name="texto" value="' .$post["texto"]. '"></textarea>
 
-                            <!--<img style="width: 100%; margin-bottom: 10px; border-radius: 2.5%" src="' .$post["midia"]. '">-->
+                            <!--<img style="width: 50%; margin-bottom: 10px; border-radius: 2.5%" src="' .$post["midia"]. '">-->
                                     
                             <div class="iconsAndButton">
                                 <div class="icons">
@@ -75,7 +76,7 @@
                                         border: 15px;
                                         border-radius: 10px;
                                         transition: 0.2s;"> Anexar</label>  
-                                    <input class="btnFileForm" type="file" id="arquivo" name="arquivo"  style=" display:none"></input>
+                                    <input class="btnFileForm" type="file" id="arquivo" name="img"  style=" display:none"></input>
                                                         
                                 </div>
                                 <button type="submit" class="btnSubmitForm">Publicar</button>

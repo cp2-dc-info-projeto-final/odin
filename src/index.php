@@ -111,7 +111,7 @@
                           border: 15px;
                           border-radius: 10px;
                           transition: 0.2s;"> Anexar</label>  
-                          <input class="btnFileForm" type="file" id="arquivo" name="arquivo"  style=" display:none"></input>
+                          <input class="btnFileForm" type="file" id="arquivo" name="img"  style=" display:none"></input>
                                                       
                         </div>
                         <button type="submit" class="btnSubmitForm">Publicar</button>

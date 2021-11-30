@@ -10,6 +10,10 @@
 
     $erro = 0;
 
+    if (empty($texto)){
+        $texto = $_POST["oldtext"];
+    }
+
     if (strlen($texto) > 400){
         echo "Texto maior que 400 caracteres.";
         $erro = 1;
