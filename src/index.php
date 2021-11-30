@@ -98,9 +98,21 @@
                     
                     <div class="iconsAndButton">
                         <div class="icons">
-                            <input class="btnFileForm" type="file" name="img"><img src="./assets/img.svg" alt="Adicionar uma imagem"></input>
-                            <button class="btnFileForm"><img src="./assets/gif.svg" alt="Adicionar um gif"></button>
-                            <button class="btnFileForm"><img src="./assets/video.svg" alt="Adicionar um video"></button>
+                          <label 
+                          for="arquivo" 
+                          class="input"
+                          style="
+                          background: #483d8b;
+                          padding: 10px 50px;
+                          color:  #fff;
+                          font-weight: bold;
+                          outline: none;
+                          cursor: pointer;
+                          border: 15px;
+                          border-radius: 10px;
+                          transition: 0.2s;"> Anexar</label>  
+                          <input class="btnFileForm" type="file" id="arquivo" name="arquivo"  style=" display:none"></input>
+                                                      
                         </div>
                         <button type="submit" class="btnSubmitForm">Publicar</button>
                     </div>
@@ -128,7 +140,6 @@
                   <p>' .$data_hora. '</p>
                 </div>
               </div>
-
             <p>' .$post["texto"]. '</p>
             <img style="width: 100%; margin-bottom: 10px; border-radius: 2.5%" src="' .$post["midia"]. '">
             <div class="actionBtnPost">
