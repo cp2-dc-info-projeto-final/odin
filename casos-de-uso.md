@@ -265,7 +265,7 @@ Caso de uso: editar usuário
 
 5- O sistema encaminhara o usuário para tela de login
 
-### CDU05
+###  CDU05
 
 Caso de uso: lista de usuários (dashboard do administrador) 
 
@@ -277,7 +277,7 @@ Caso de uso: lista de usuários (dashboard do administrador)
 
 3- O sistema direcionará o administrador para uma página com uma lista de todos os usuários
 
-### CDU06
+###  CDU06
 
 Caso de uso: editar usuário(administrador) 
 
@@ -301,7 +301,7 @@ Caso de uso: editar usuário(administrador)
 
 4- O sistema encaminhara para tela de login  
 
-### CDU07
+###  CDU07
 
 Caso de uso: excluir usuário (administrador) 
 
@@ -315,7 +315,7 @@ Caso de uso: excluir usuário (administrador)
 
 4- Onde o administrador poderá excluir usuários  
 
-### CDU08
+###  CDU08
 
 Caso de uso: sistema de busca por palavra chave  
 
@@ -327,7 +327,7 @@ Caso de uso: sistema de busca por palavra chave
 
 3- O sistema exibirá usuários relacionados à palavra-chave 
 
-### CDU09
+###  CDU09
 
 Casos de uso: criar postagens 
 
@@ -339,7 +339,7 @@ Casos de uso: criar postagens
 
 3- O sistema irá armazenar e exibirá a postagem no menu principal e timeline do próprio usuário
 
-### CDU10
+###  CDU10
 
 Casos de uso: editar postagens 
 
@@ -353,7 +353,7 @@ Casos de uso: editar postagens
 
 4- O sistema irá armazenar e exibirá a postagem no menu principal e timeline do próprio usuário 
 
-### CDU11
+###  CDU11
 
 Casos de uso: excluir postagens
 
@@ -381,7 +381,7 @@ Casos de uso: excluir postagens
 
 5- O sistema irá armazena e exibirá a postagem no menu principal e timeline do próprio usuário
  
-### CDU12
+###  CDU12
  
 Casos de uso: timeline de usuário  
 
