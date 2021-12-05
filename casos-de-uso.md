@@ -277,7 +277,7 @@ Caso de uso: lista de usuários (dashboard do administrador)
 
 3- O sistema direcionará o administrador para uma página com uma lista de todos os usuários
 
-###  CD U06
+###  CDU 06
 
 Caso de uso: editar usuário(administrador) 
 
