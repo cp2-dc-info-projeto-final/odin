@@ -15,8 +15,6 @@
  - [CDU 11](#CDU-11): excluir postagens
  - [CDU 12](#CDU-12): timeline do usuário
 
-
-
 ## Lista dos Atores
 
  - Usuário 
