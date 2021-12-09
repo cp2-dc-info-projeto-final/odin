@@ -331,7 +331,7 @@ Caso de uso: sistema de busca por palavra chave
 
 Casos de uso: criar postagens 
 
-**FLUXO PRINCIPAl**  
+**FLUXO PRINCIPAL**  
 
 1- O sistema apresentara um formulário com a possibilidade de escrever e postar fotos 
 
