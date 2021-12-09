@@ -335,7 +335,7 @@ Casos de uso: criar postagens
 
 1- O sistema apresentara um formulário com a possibilidade de escrever e postar fotos 
 
-2- O usuário poderá escrever preencherá esse formulário e clicará em publicar  
+2- O usuário poderá escrever nesse formulário e clicará em publicar  
 
 3- O sistema irá armazenar e exibirá a postagem no menu principal e timeline do próprio usuário
 
