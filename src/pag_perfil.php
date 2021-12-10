@@ -47,6 +47,8 @@
             <script src="_js/excluir.js"></script>
             <script src="_js/excluirpost.js"></script>
             <script src="_js/linkeditar.js"></script>
+            <script src="_js/curtir.js"></script>
+            <script src="_js/descurtir.js"></script>
 
         <section class="flex"> 
             <div class="card-container">
@@ -64,8 +66,8 @@
                     <h4> <?php echo $usuario["email"]; ?> </h4>
                     <p></p>
                     <p> <?php echo $usuario["telefone"]; ?> </p>
-                    <a href="#" class="btn">Alterar Bio</a>
-                    <p></p>
+                    <!--<a href="#" class="btn">Alterar Bio</a>
+                    <p></p>-->
                     <?php echo "<a onclick='confirmarExclusao(".$usuario["id"].")' class='btn'> Excluir Perfil</a>"; ?>
                     <p></p>
                     <?php echo "<a href='editar.php?id=".$usuario["id"]."' class='btn'> Alterar Informações</a>"; ?>
@@ -93,13 +95,23 @@
 
                           <p>' .$post["texto"]. '</p>
                           <img style="width: 100%; margin-bottom: 10px; border-radius: 2.5%" src="' .$post["midia"]. '">
-                          <div class="actionBtnPost">
-                            <button type="button" class="filesPost like"><img src="./assets/heart.svg" alt="Curtir">Curtir</button>
-                            <button type="button" class="filesPost comment"><img src="./assets/comment.svg" alt="Comentar">Comentar</button>';
-                            if ($_SESSION["id"] == $postuser["id"]){
+                          <div class="actionBtnPost">';
+
+                          $sqllike = "SELECT * FROM curtidas WHERE id_usuario = " .$_SESSION["id"]. " AND id_post = " .$post["id"]. ";";
+                          $reslike = mysqli_query($mysqli, $sqllike);
+                          $linhaslike = mysqli_num_rows(mysqli_query($mysqli, $sqllike));
+              
+                          if ($linhaslike != 1){
+                            echo '<button type="button" class="filesPost like" onclick="curtir(' .$_SESSION["id"]. ', ' .$post["id"]. ')"><img src="./assets/heart.svg" alt="Curtir">Curtir</button>';
+                          }
+                          else{
+                            echo '<button type="button" class="filesPost like" onclick="descurtir(' .$_SESSION["id"]. ', ' .$post["id"]. ')"><img src="./assets/heart.svg" alt="Descurtir">Descurtir</button>';
+                          }
+                          echo '<button type="button" class="filesPost comment"><img src="./assets/comment.svg" alt="Comentar">Comentar</button>';
+                            if ($_SESSION["id"] == $usuario["id"]){
                               echo '<button type="button" class="filesPost share" onclick="editarPost(' .$post["id"]. ')">Editar</button>';
                             }
-                            if ($_SESSION["adm"] == 1 || $_SESSION["id"] == $postuser["id"]){
+                            if ($_SESSION["adm"] == 1 || $_SESSION["id"] == $usuario["id"]){
                               echo '<button type="button" class="filesPost like" onclick="excluirPost('.$post["id"].')">Excluir</button>';
                             }
                           echo '</div></li>';

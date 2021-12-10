@@ -85,6 +85,8 @@
       <script src="_js/mobile-navbar.js"></script>
       <script src="_js/excluirpost.js"></script>
       <script src="_js/linkeditar.js"></script>
+      <script src="_js/curtir.js"></script>
+      <script src="_js/descurtir.js"></script>
 
       <!---Formulario de Postagens-->
       <li style="height: 50px;"></li>
@@ -142,9 +144,20 @@
               </div>
             <p>' .$post["texto"]. '</p>
             <img style="width: 100%; margin-bottom: 10px; border-radius: 2.5%" src="' .$post["midia"]. '">
-            <div class="actionBtnPost">
-              <button type="button" class="filesPost like"><img src="./assets/heart.svg" alt="Curtir">Curtir</button>
-              <button type="button" class="filesPost comment"><img src="./assets/comment.svg" alt="Comentar">Comentar</button>';
+            <div class="actionBtnPost">';
+
+            $sqllike = "SELECT * FROM curtidas WHERE id_usuario = " .$_SESSION["id"]. " AND id_post = " .$post["id"]. ";";
+            $reslike = mysqli_query($mysqli, $sqllike);
+            $linhaslike = mysqli_num_rows(mysqli_query($mysqli, $sqllike));
+
+            if ($linhaslike != 1){
+              echo '<button type="button" class="filesPost like" onclick="curtir(' .$_SESSION["id"]. ', ' .$post["id"]. ')"><img src="./assets/heart.svg" alt="Curtir">Curtir</button>';
+            }
+            else{
+              echo '<button type="button" class="filesPost like" onclick="descurtir(' .$_SESSION["id"]. ', ' .$post["id"]. ')"><img src="./assets/heart.svg" alt="Descurtir">Descurtir</button>';
+            }
+            
+            echo '<button type="button" class="filesPost comment"><img src="./assets/comment.svg" alt="Comentar">Comentar</button>';
               if ($_SESSION["id"] == $postuser["id"]){
                 echo '<button type="button" class="filesPost share" onclick="editarPost(' .$post["id"]. ')">Editar</button>';
               }

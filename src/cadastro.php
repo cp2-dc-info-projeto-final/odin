@@ -38,7 +38,7 @@
                     <p>E-mail: <input type="email" name="email" size="30" maxlength="30" required="required"></p>
                     <p>Senha: <input type="password" name="senha" maxlength="20" minlength="8" required="required"></p>
                     <p>Confirme sua senha: <input type="password" name="csenha" maxlength="20" minlength="8" required="required"></p>
-                    <p>Telefone (celular): <input type="tel" name="telefone" pattern="[0-9]{2}[9]{1}[0-9]{8}$" required="required"></p>
+                    <p>Telefone (celular): <input type="tel" name="telefone" pattern="[0-9]{2}[9]{1}[0-9]{8}$" required="required" placeholder="21912345678"></p>
                     <input type="submit" value="Cadastrar">
                 </form>
             </div>

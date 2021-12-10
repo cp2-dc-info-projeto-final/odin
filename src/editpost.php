@@ -38,9 +38,7 @@
         mysqli_query($mysqli, $sql);
         echo "Sua publicação foi atualizada!";
 
-        echo "<br><br><a href='index.php'>Home</a>";
-
-        //header("Location: index.php");
+        header("Location: index.php");
     }
 
     mysqli_close($mysqli);

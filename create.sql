@@ -44,22 +44,14 @@ CREATE TABLE comentarios (
     FOREIGN KEY (id_post) REFERENCES posts(id)
 );
 
-CREATE TABLE curtepost (
+CREATE TABLE curtidas (
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     id_usuario int NOT NULL,
-    id_post int NOT NULL,
-    curtida tinyint(1) NOT NULL DEFAULT 0,
+    id_post int,
+    id_comentario int,
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id),
-    FOREIGN KEY (id_post) REFERENCES posts(id)
-);
-
-CREATE TABLE curtecomment (
-    id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    id_usuario int NOT NULL,
-    id_comment int NOT NULL,
-    curtida tinyint(1) NOT NULL DEFAULT 0,
-    FOREIGN KEY (id_usuario) REFERENCES usuarios(id),
-    FOREIGN KEY (id_comment) REFERENCES comentarios(id)
+    FOREIGN KEY (id_post) REFERENCES posts(id),
+    FOREIGN KEY (id_comentario) REFERENCES comentarios(id)
 );
 
 INSERT INTO `usuarios` (`id`, `nome`, `sobrenome`, `datanasc`, `email`, `senha`, `telefone`, `fotoperfil`, `adm`) VALUES
