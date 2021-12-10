@@ -12,9 +12,6 @@
         $sobrenome = $_POST["sobrenome"];
         $datanasc = $_POST["datanasc"];
         $email = $_POST["email"];
-        $senhaatual = $_POST["senhaatual"];
-        $senha = $_POST["senha"];
-        $csenha = $_POST["csenha"];
         $telefone = $_POST["telefone"];
         $adm = (isset($_POST["adm"])) ? 1 : 0;
 
@@ -24,7 +21,7 @@
 
         $erro = 0;
 
-        if (empty($nome) || empty($sobrenome) || empty($datanasc) || empty($email) || empty($senha) || empty($csenha) || empty($telefone)){
+        if (empty($nome) || empty($sobrenome) || empty($datanasc) || empty($email) || empty($telefone)){
             echo "Preencha todos os campos. <br>";
             $erro = 1;
         }
@@ -69,6 +66,31 @@
             $erro = 1;
         }
 
+        if ($erro == 0){
+            $sql = "UPDATE usuarios SET nome = '$nome', sobrenome = '$sobrenome', datanasc = '$datanasc', email = '$email', telefone = '$telefone', adm = '$adm' ";
+            $sql .= "WHERE id = $id;";
+            mysqli_query($mysqli,$sql);
+            echo "Atualização bem-sucedida. <br>";
+            header("Location: index.php");
+        }else{
+            echo "<br><a href='editar.php'>Tentar editar o usuário novamente</a>";
+        }
+    }
+    elseif ($operacao == "alterarsenha"){
+        $id = $_POST["id"];
+        $senhaatual = $_POST["senhaatual"];
+        $senha = $_POST["senha"];
+        $csenha = $_POST["csenha"];
+
+        if (empty($senhaatual) || empty($senha) || empty($csenha)){
+            echo "Preencha todos os campos. <br>";
+            $erro = 1;
+        }
+
+        $sql = "SELECT * FROM usuarios WHERE id = '$id';";
+        $res = mysqli_query($mysqli, $sql);
+        $usuario = mysqli_fetch_array($res);
+
         if(!password_verify($senhaatual, $usuario["senha"])){
             echo "A senha atual está errada.<br>";
             $erro = 1;
@@ -86,51 +108,11 @@
 
         if ($erro == 0){
             $senha_cripto = password_hash($senha, PASSWORD_DEFAULT);
-            $sql = "UPDATE usuarios SET nome = '$nome', sobrenome = '$sobrenome', datanasc = '$datanasc', email = '$email', senha = '$senha_cripto', telefone = '$telefone', adm = '$adm' ";
+            $sql = "UPDATE usuarios SET senha = '$senha_cripto' ";
             $sql .= "WHERE id = $id;";
             mysqli_query($mysqli,$sql);
             echo "Atualização bem-sucedida. <br>";
             header("Location: index.php");
-        }else{
-            echo "<br><a href='editar.php'>Tentar editar o usuário novamente</a>";
-        }
-    }
-    elseif ($operacao == "buscar"){
-        $busca = $_POST["busca"];
-
-        $sql = "SELECT * FROM usuarios WHERE nome like '%$busca%' OR sobrenome like '%$busca%';";
-        $res = mysqli_query($mysqli,$sql);
-        $linhas = mysqli_num_rows($res);
-        if ($linhas == 0){
-            echo "Não há resultados para sua pesquisa.";
-        }
-        for($i = 0; $i < $linhas; $i++){
-            $usuario = mysqli_fetch_array($res);
-            echo "<a href='pag_perfil.php?id=".$usuario["id"]."'>" .$usuario["nome"]. " " .$usuario["sobrenome"]. "</a><br>";
-            echo "Email: " .$usuario["email"]. "<br>";
-            echo "Telefone: " .$usuario["telefone"]. "<br>";
-            if ($_SESSION["adm"] == 1 || $_SESSION["id"] == $usuario["id"]){
-                echo "<a href='editar.php?id=".$usuario["id"]."'>Editar usuário</a><br>";
-                echo "<a href='excluir.php?id=".$usuario["id"]."'>Excluir usuário</a><br>";
-            }
-            echo "----------------------------------<br>";
-        }
-    }
-    elseif ($operação == "exibir"){
-        $sql = "SELECT * FROM usuarios;";
-        $res = mysqli_query($mysqli,$sql);
-        $linhas = mysqli_num_rows($res);
-        for($i=0; $i < $linhas; $i++){
-            $usuario = mysqli_fetch_array($res);
-            echo "<a href='pag_perfil.php?id=".$usuario["id"]."'>" .$usuario["nome"]. " " .$usuario["sobrenome"]. "</a><br>";
-            echo "Data de nascimento: " .$usuario["datanasc"]. "<br>";
-            echo "Email: " .$usuario["email"]. "<br>";
-            echo "Telefone: " .$usuario["telefone"]. "<br>";
-            if ($_SESSION["adm"] == 1 || $_SESSION["id"] == $usuario["id"]){
-                echo "<a href='editar.php?id=".$usuario["id"]."'>Editar usuário</a><br>";
-                echo "<a href='excluir.php?id=".$usuario["id"]."'>Excluir usuário</a><br>";
-            }
-            echo "----------------------------------<br>";
         }
     }
 

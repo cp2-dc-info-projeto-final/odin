@@ -11,7 +11,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Odin - Meu Perfil</title>
+        <title>Odin - Perfil</title>
         <link rel="stylesheet" href="_css/styleperfil.css" />
     </head>
 
@@ -29,7 +29,7 @@
                         
                 <ul class="nav-list">
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="#">Perfil</a></li>
+                    <li><a href="pag_perfil.php">Perfil</a></li>
                     <li><a onclick="confirmarSaida()">Sair</a></li>
                 </ul>
             </nav>
@@ -66,11 +66,14 @@
                     <h4> <?php echo $usuario["email"]; ?> </h4>
                     <p></p>
                     <p> <?php echo $usuario["telefone"]; ?> </p>
-                    <!--<a href="#" class="btn">Alterar Bio</a>
-                    <p></p>-->
-                    <?php echo "<a onclick='confirmarExclusao(".$usuario["id"].")' class='btn'> Excluir Perfil</a>"; ?>
-                    <p></p>
-                    <?php echo "<a href='editar.php?id=".$usuario["id"]."' class='btn'> Alterar Informações</a>"; ?>
+                    <?php
+                      echo "<a onclick='confirmarExclusao(".$usuario["id"].")' class='btn'> Excluir Perfil</a>";
+                      echo "<p></p>";
+                      echo "<a href='editar.php?id=".$usuario["id"]."' class='btn'> Alterar Informações</a>";
+                      if ($_SESSION["id"] == $usuario["id"]){
+                          echo "<p></p> <a href='altsenha.php?id=".$usuario["id"]."' class='btn'>Alterar Senha</a>";
+                      }
+                    ?>
                 
                 
                     <p></p>

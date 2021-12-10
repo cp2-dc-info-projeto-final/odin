@@ -45,9 +45,6 @@
                     <p>Sobrenome: <input type="text" name="sobrenome" size="30" maxlength="30" required="required" value="<?php echo $usuario["sobrenome"]?>"></p>
                     <p>Data de nascimento: <input type="date" name="datanasc" required="required" max="<?php echo date('Y-m-d', strtotime('-18 year')); ?>" value="<?php echo $usuario["datanasc"]?>"></p>
                     <p>E-mail: <input type="email" name="email" size="30" maxlength="30" required="required" value="<?php echo $usuario["email"]?>"></p>
-                    <p>Senha atual: <input type="password" name="senhaatual" maxlength="20" minlength="8" required="required"></p>
-                    <p>Nova senha: <input type="password" name="senha" maxlength="20" minlength="8" required="required"></p>
-                    <p>Confirme sua nova senha: <input type="password" name="csenha" maxlength="20" minlength="8" required="required"></p>
                     <p>Telefone (celular): <input type="tel" name="telefone" pattern="[0-9]{2}[9]{1}[0-9]{8}$" required="required" value="<?php echo $usuario["telefone"]?>"></p>
                     <?php
                         if ($_SESSION["adm"] == 1){
