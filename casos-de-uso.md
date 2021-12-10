@@ -7,13 +7,19 @@
  - [CDU 03](#CDU-03): Cadastrar 
  - [CDU 04](#CDU-04): Editar usuário
  - [CDU 05](#CDU-05): Lista de usuários (dashboard do administrador)
- - [CDU 06](#CDU-06): Editar usuário(administrador)
- - [CDU 07](#CDU-07): Excluir usuário (administrador)
- - [CDU 08](#CDU-08): Sistema de busca por palavra chave
- - [CDU 09](#CDU-09): Criar postagens
- - [CDU 10](#CDU-10): Editar postagens
- - [CDU 11](#CDU-11): Excluir postagens
- - [CDU 12](#CDU-12): Timeline do usuário
+ - [CDU 06](#CDU-06): privilegios de administrador
+ - [CDU 07](#CDU-07): Editar usuário(administrador)
+ - [CDU 08](#CDU-08): Excluir usuário (administrador)
+ - [CDU 09](#CDU-09): Sistema de busca por palavra chave
+ - [CDU 10](#CDU-10): Criar postagens
+ - [CDU 11](#CDU-11): Editar postagens
+ - [CDU 12](#CDU-12): Excluir postagens
+ - [CDU 13](#CDU-13): Timeline do usuário
+ - [CDU 14](#CDU-14): Criar comentários
+ - [CDU 15](#CDU-15): Editar comentários
+ - [CDU 16](#CDU-16): Excluir comentários
+ - [CDU 17](#CDU-17): Curtir postagem/comentário
+ - [CDU 18](#CDU-18): Remover curtida de postagem/comentário
 
 ## Lista dos Atores
 
@@ -277,7 +283,31 @@ Caso de uso: lista de usuários (dashboard do administrador)
 
 3- O sistema direcionará o administrador para uma página com uma lista de todos os usuários
 
-###  CDU 06
+### CDU 06
+
+Casos de uso: privilégios de administrador   
+
+FLUXO PRINCIPAL  
+
+1- Na dashboard o administrador verá todos os usuários  
+
+2- O administrador clicará em um usuário 
+
+3- O administrador poderá conceder os privilégios administrador para esse usuário  
+
+4- O sistema irá acessar o banco de dados irá marca esse usuário como administrador 
+
+FLUXO ALTERNATIVO A
+
+1- Na dashboard o administrador verá todos os usuários 
+
+2- O administrador clicará em um outro administrador  
+
+3- O administrador poderá retira os privilégios desse usuário 
+
+4- O sistema irá acessar o banco de dados irá desmarcar esse usuário como administrador 
+
+###  CDU 07
 
 Caso de uso: editar usuário(administrador) 
 
@@ -301,7 +331,7 @@ Caso de uso: editar usuário(administrador)
 
 4- O sistema encaminhara para tela de login  
 
-###  CDU 07
+###  CDU 08
 
 Caso de uso: excluir usuário (administrador) 
 
@@ -315,7 +345,7 @@ Caso de uso: excluir usuário (administrador)
 
 4- Onde o administrador poderá excluir usuários  
 
-###  CDU 08
+###  CDU 09
 
 Caso de uso: sistema de busca por palavra chave  
 
@@ -327,7 +357,7 @@ Caso de uso: sistema de busca por palavra chave
 
 3- O sistema exibirá usuários relacionados à palavra-chave 
 
-###  CDU 09
+###  CDU 10
 
 Casos de uso: criar postagens 
 
@@ -355,7 +385,7 @@ Casos de uso: criar postagens
 
 3- O sistema irá armazenar e exibirá a postagem no menu principal e timeline do próprio usuário 
 
-###  CDU 10
+###  CDU 11
 
 Casos de uso: editar postagens 
 
@@ -369,7 +399,7 @@ Casos de uso: editar postagens
 
 4- O sistema irá armazenar e exibirá a postagem no menu principal e timeline do próprio usuário 
 
-###  CDU 11
+###  CDU 12
 
 Casos de uso: excluir postagens
 
@@ -397,7 +427,7 @@ Casos de uso: excluir postagens
 
 5- O sistema irá armazena e exibirá a postagem no menu principal e timeline do próprio usuário
  
-###  CDU 12
+###  CDU 13
  
 Casos de uso: timeline de usuário  
 
@@ -408,3 +438,99 @@ Casos de uso: timeline de usuário
 2- As postagens dos outros usuários  
 
 3- O sistema apresentará no menu principal uma timeline com todas as postagens dos usuários  
+
+### CDU 14
+
+Casos de uso: criar comentário 
+
+**FLUXO PRINCIPAL** 
+
+1- O sistema apresentará um formulário onde só poderá ser preenchido com textos 
+
+2- O usuário poderá escrever e clicar no botão comentar 
+
+3- O sistema irá armazenar e exibirá o comentário na postagem no menu principal e na timeline do próprio usuário   
+
+### CDU 15
+
+Casos de uso: editar comentário 
+
+**FLUXO PRINCIPAL** 
+
+1- O sistema irá apresentar um botão editar no comentário para o usuário que comentou na postagem 
+
+2- O usuário clicará em editar e ponderar editar seu comentário  
+
+3- O usuário preencherá esse formulário e clicará em editar 
+
+4- O sistema irá armazenar e exibirá o comentário na postagem no menu principal e na timeline do próprio usuário 
+
+### CDU 16
+
+Casos de uso: excluir comentário 
+
+**FLUXO PRINCIPAL** 
+
+1- O sistema apresentará um botão de excluir o comentário para o usuário que fez o comentário 
+
+2- O usuário clicará em excluir ele irá excluir seu comentário 
+
+3- O sistema irá confirma se ele quer excluir o comentário 
+
+4- O usuário irá clicar no botão confirmar 
+
+5- O sistema acessará o banco de dados e irá excluir a postagem 
+
+**FLUXO ALTERNATIVO A** 
+
+1- O sistema apresentará um botão de excluir o comentário para o usuário que fez o comentário 
+
+2- O usuário clicará em excluir ele irá excluir  
+
+3- O sistema irá confirma se ele quer excluir o comentário  
+
+4- O usuário irá clicar no botão cancelar  
+
+5- O sistema irá armazenar e exibirá o comentário na postagem no menu principal e timeline do próprio usuário  
+
+### CDU 17
+
+Casos de uso: curtir postagem/comentário 
+
+**FLUXO PRINCIPAL** 
+
+1- O sistema apresentará um botão escrito curtir nas postagens 
+
+2- O usuário irá clicar no botão de curtir 
+
+3- O sistema irá armazenar as curtidas nas postagens 
+
+**FLUXO ALTERNATIVO A** 
+
+1- O sistema apresentará um botão escrito curtir nos comentários 
+
+2- O usuário irá clicar no botão de curtir 
+
+3- O sistema irá armazenar a curtida nos comentários  
+
+### CDU 18
+
+Casos de uso: remover curtida de postagem/comentário  
+
+**FLUXO PRINCIPAL** 
+
+1- O sistema apresentará um botão escrito descurtir nas postagens 
+
+2- O usuário clicar no botão de descurtir 
+
+3- O sistema acessará o banco de dados irá excluir uma curtida da postagem  
+
+**FLUXO ALTERNATIVO A**
+
+1- O sistema apresentará um botão escrito descurtir nos comentários 
+
+2- O usuário clicar no botão de descurtir 
+
+3- O sistema acessará o banco de dados irá excluir uma curtida da postagem  
+
+ 
