@@ -339,6 +339,22 @@ Casos de uso: criar postagens
 
 3- O sistema irá armazenar e exibirá a postagem no menu principal e timeline do próprio usuário
 
+**FLUXO ALTERNATIVO A**
+
+1- O sistema apresentará um formulário com a possibilidade de escrever e postar fotos 
+
+2- O usuário poderá colocar uma foto nesse formulário e clicará em publicar 
+
+3- O sistema irá armazernar e exibirá a posategm no menu principal e timeline do próprio usuário
+
+**FLUXO ALTERNATIVO B**
+
+1- O sistema apresentará um formulário com a possibilidade de escrever e postar fotos
+
+2- O usuário poderá colocar uma foto e escrever nesse formulário e clicará em publicar
+
+3- O sistema irá armazenar e exibirá a postagem no menu principal e timeline do próprio usuário 
+
 ###  CDU 10
 
 Casos de uso: editar postagens 
@@ -349,7 +365,7 @@ Casos de uso: editar postagens
 
 2- O usuário clicará em editar e ele irá poder editar sua postagem 
 
-3- O usuário preencherá esse formulário e clicará em editar 
+3- O usuário preencherá  esse formulário e clicará em editar 
 
 4- O sistema irá armazenar e exibirá a postagem no menu principal e timeline do próprio usuário 
 
