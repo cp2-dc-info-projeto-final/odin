@@ -28,7 +28,7 @@
                         
                 <ul class="nav-list">
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="#">Perfil</a></li>
+                    <li><a href="pag_perfil.php">Perfil</a></li>
                     <li><a onclick="confirmarSaida()">Sair</a></li>
                 </ul>
             </nav>

@@ -37,21 +37,21 @@
         <main>
             <script src="_js/mobile-navbar.js"></script>
 
-            <div id="divcad">
+            <div id="divcad" style="margin-left: 0px; margin-top: 10px;">
                 <form id="formcad" action = "operador.php" method = "POST">
                     <input type="hidden" name="operacao" value="editar">
                     <input type="hidden" name="id" value="<?php echo $usuario["id"]?>">
-                    <p>Nome: <input type="text" name="nome" size="30" maxlength="30" required="required" value="<?php echo $usuario["nome"]?>"></p>
-                    <p>Sobrenome: <input type="text" name="sobrenome" size="30" maxlength="30" required="required" value="<?php echo $usuario["sobrenome"]?>"></p>
-                    <p>Data de nascimento: <input type="date" name="datanasc" required="required" max="<?php echo date('Y-m-d', strtotime('-18 year')); ?>" value="<?php echo $usuario["datanasc"]?>"></p>
-                    <p>E-mail: <input type="email" name="email" size="30" maxlength="30" required="required" value="<?php echo $usuario["email"]?>"></p>
-                    <p>Telefone (celular): <input type="tel" name="telefone" pattern="[0-9]{2}[9]{1}[0-9]{8}$" required="required" value="<?php echo $usuario["telefone"]?>"></p>
+                    <h3>Nome: <input type="text" name="nome" size="30" maxlength="30" required="required" value="<?php echo $usuario["nome"]?>"></h3><br>
+                    <h3>Sobrenome: <input type="text" name="sobrenome" size="30" maxlength="30" required="required" value="<?php echo $usuario["sobrenome"]?>"></h3><br>
+                    <h3>Data de nascimento: <input type="date" name="datanasc" required="required" max="<?php echo date('Y-m-d', strtotime('-18 year')); ?>" value="<?php echo $usuario["datanasc"]?>"></h3><br>
+                    <h3>E-mail: <input type="email" name="email" size="30" maxlength="30" required="required" value="<?php echo $usuario["email"]?>"></h3><br>
+                    <h3>Telefone (celular): <input type="tel" name="telefone" pattern="[0-9]{2}[9]{1}[0-9]{8}$" required="required" value="<?php echo $usuario["telefone"]?>"></h3><br>
                     <?php
                         if ($_SESSION["adm"] == 1){
                             if ($usuario["adm"] == 1){
-                                echo "<p><input type = 'checkbox' name='adm' checked='checked'>Promover/Rebaixar administrador</p>";
+                                echo "<h3><input type = 'checkbox' name='adm' checked='checked'>Promover/Rebaixar administrador</h3><br>";
                             }else{
-                                echo "<p><input type = 'checkbox' name='adm'>Promover/Rebaixar administrador</p>";
+                                echo "<h3><input type = 'checkbox' name='adm'>Promover/Rebaixar administrador</h3><br>";
                             }
                         }
                     ?>

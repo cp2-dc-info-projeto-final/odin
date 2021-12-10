@@ -73,7 +73,7 @@
               <ul class="dropdown-menu"
               aria-labelledby="navbarDropdown">
                 <li><a href="editar.php" class="dropdown-item">Editar Usuario</a></li>
-                <li><a href="#" class="dropdown-item">Ajuda e Suporte</a></li>
+                <li><a href="altsenha.php?id=<?php echo $usuario["id"]; ?>" class="dropdown-item">Alterar Senha</a></li>
                 <li><a onclick="confirmarSaida()" class="dropdown-item">Sair</a></li>
               </ul>
             </li>

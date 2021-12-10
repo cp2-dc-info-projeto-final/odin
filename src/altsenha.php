@@ -37,13 +37,13 @@
         <main>
             <script src="_js/mobile-navbar.js"></script>
 
-            <div id="divcad">
+            <div id="divcad" style="margin-left: 0px; margin-top: 10px;">
                 <form id="formcad" action = "operador.php" method = "POST">
                     <input type="hidden" name="operacao" value="alterarsenha">
                     <input type="hidden" name="id" value="<?php echo $usuario["id"]?>">
-                    <p>Senha atual: <input type="password" name="senhaatual" maxlength="20" minlength="8" required="required"></p>
-                    <p>Nova senha: <input type="password" name="senha" maxlength="20" minlength="8" required="required"></p>
-                    <p>Confirme sua nova senha: <input type="password" name="csenha" maxlength="20" minlength="8" required="required"></p>
+                    <h3>Senha atual: <input type="password" name="senhaatual" maxlength="20" minlength="8" required="required"></h3><br>
+                    <h3>Nova senha: <input type="password" name="senha" maxlength="20" minlength="8" required="required"></h3><br>
+                    <h3>Confirme sua nova senha: <input type="password" name="csenha" maxlength="20" minlength="8" required="required"></h3><br>
                     <input type="submit" value="Atualizar senha">
                 </form>
             </div>
