@@ -7,7 +7,7 @@
  - [CDU 03](#CDU-03): Cadastrar 
  - [CDU 04](#CDU-04): Editar usuário
  - [CDU 05](#CDU-05): Lista de usuários (dashboard do administrador)
- - [CDU 06](#CDU-06): privilegios de administrador
+ - [CDU 06](#CDU-06): Privilegios de administrador
  - [CDU 07](#CDU-07): Editar usuário(administrador)
  - [CDU 08](#CDU-08): Excluir usuário (administrador)
  - [CDU 09](#CDU-09): Sistema de busca por palavra chave
