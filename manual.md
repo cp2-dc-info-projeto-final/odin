@@ -1,18 +1,19 @@
 # Manual do Usuário
 
-Nullam vitae velit a eros dignissim bibendum id a enim. Vestibulum hendrerit nisl sed magna gravida, non elementum urna condimentum. Quisque porta tincidunt nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis at varius mauris. Quisque molestie ante imperdiet elit blandit, ac volutpat sem efficitur. Donec nec sem tempus, ullamcorper nisl non, blandit tortor. Etiam suscipit rutrum laoreet. Donec facilisis eros ultrices, venenatis quam nec, feugiat ante. Donec ante eros, consequat nec nibh vitae, porta vehicula orci. Duis nec eros et lorem malesuada sodales. Praesent auctor accumsan ipsum, et volutpat ex porttitor eu. Vestibulum facilisis elementum elit, hendrerit mollis velit pretium in. Curabitur tristique vel augue a sodales. Sed malesuada lacinia porttitor.
+Bem-vindo ao Odin, uma rede social para a divulgação de produtos para venda e troca, além de proporcionar a interação entre vendedores e compradores. Então, o que você está esperando? Cadastre-se e faça parte dessa comunidade!
 
 **Lista das Funcionalidades:**
 
- - [Funcionalidade X](#Funcionalidade-X)
+ - [Cadastro](#Cadastro)
  - [Funcionalidade Y](#Funcionalidade-Y)
  - [Funcionalidade Z](#Funcionalidade-Z)
 
-## Funcionalidade X
+##  Cadastro
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus volutpat molestie justo non tincidunt. Praesent tristique, elit convallis eleifend congue, nisl ex lobortis lorem, ac gravida tellus lacus eu enim. Aliquam urna turpis, convallis id turpis et, iaculis consequat nunc. Proin elit orci, imperdiet nec tristique nec, tincidunt ut nibh. Donec dignissim urna ut erat imperdiet aliquam. Vestibulum augue leo, pellentesque malesuada egestas quis, molestie at lacus. Donec rhoncus finibus lorem, accumsan interdum sapien facilisis sit amet. Integer odio magna, sodales at varius at, dapibus vitae ante. Sed ac ullamcorper ex. Ut in metus ipsum. Duis vulputate porta mi, id venenatis massa ornare vel. Nunc ornare malesuada elit sed feugiat.
+A primeira etapa para acessar o Odin é o cadastro, no qual você informará todos os dados necessários para entrar na rede. O cadastro se inicia ao digitar seu nome e sobrenome, mas se atente ao requisitos necessários para cada campo. É muito importante lembrar que só maiores de 18 anos têm permissão para se cadastrar. Por isso, informe sua data de nascimento verdadeira. Logo após, insira um e-mail válido, por exemplo: usuario@gmail.com. É preciso também uma senha, na qual, para preencher, o mínimo são 8 caracteres e o máximo são 20. Depois, confirme sua senha e, por fim, informe o seu número de telefone celular.
 
-Aliquam in convallis quam, egestas consectetur felis. Integer in dolor sit amet neque volutpat faucibus ut porttitor libero. Morbi faucibus non purus nec finibus. Pellentesque lacus nunc, ultricies quis enim at, vehicula semper nibh. Ut eget erat blandit, porta nibh sit amet, facilisis felis. Aliquam vitae consequat nisi, ut vestibulum sapien. Sed ornare quis leo quis cursus. Vestibulum ut quam odio. Donec sit amet risus augue. Curabitur venenatis a tortor ac placerat.
+![casdastro](https://user-images.githubusercontent.com/90480715/145690323-26668df4-80d5-48ff-9d53-6585176108be.jpg)
+
 
 ## Funcionalidade Y
 
