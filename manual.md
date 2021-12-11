@@ -9,12 +9,12 @@ Bem-vindo ao Odin, uma rede social para a divulgação de produtos para venda e 
  - [Timeline](#Timeline)
  - [Postagens](#Postagens)
  - [Editar/Excluir Postagens](#Editar/Excluir Postagens)
- - [Curtir/Descurtir Postagens/Comentarios](#Curtir/Descurtir Postagens/Comentarios)
- - [Criar Comentarios](#Criar Comentarios)
- - [Barra de pesquisa](#Barra de pesquisa)
- - [Editar Perfil](#Eitar Perfil)
- - [Conceder/Retirar Administrador](#Conceder/Retirar Administrador)
-
+ - [Postagens](#Postagens)
+ - [Postagens](#Postagens)
+ - [Postagens](#Postagens)
+ - [Postagens](#Postagens)
+ - [Postagens](#Postagens)
+ 
 ##  Cadastro
 
 A primeira etapa para acessar o Odin é o cadastro, no qual você informará todos os dados necessários para entrar na rede. O cadastro se inicia ao digitar seu nome e sobrenome, mas se atente ao requisitos necessários para cada campo. É muito importante lembrar que só maiores de 18 anos têm permissão para se cadastrar. Por isso, informe sua data de nascimento verdadeira. Logo após, insira um e-mail válido, por exemplo: usuario@gmail.com. É preciso também uma senha, na qual, para preencher, o mínimo são 8 caracteres e o máximo são 20. Depois, confirme sua senha e, por fim, informe o seu número de telefone celular.
