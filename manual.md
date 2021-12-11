@@ -10,11 +10,11 @@ Bem-vindo ao Odin, uma rede social para a divulgação de produtos para venda e 
  - [Postagens](#Postagens)
  - [Editar/Excluir](#Editar/Excluir)
  - [Curtir/Descurtir](#Curtir/Descurtir)
- - [Criar-Comentários](#Criar-Comentarios)
+ - [Criar-Comentarios](#Criar-Comentarios)
  - [Barra-De-Pesquisa](#Barra-De-Pesquisa)
  - [Editar-Perfil](#Editar-Perfil)
  - [Conceder/Retirar-Administrador](#Conceder/Retirar-Administrador)
- - [Excluir-Comentários/Postagens(Administrador)](#Excluir-Comentários/Postagens(Administrador))
+ - [Excluir-Comentarios/Postagens(Administrador)](#Excluir-Comentarios/Postagens(Administrador))
  
 ##  Cadastro
 
@@ -51,7 +51,7 @@ Além de postar, você também pode curtir e descurtir postagens e comentários.
 
 ![curtir](https://user-images.githubusercontent.com/90480715/145691252-8553856b-6bc1-487d-9571-377dc78d4fed.jpg)
 
-## Criar-Comentários
+## Criar-Comentarios
 
 Também é possível escrever comentários em postagens. Ao conferir uma postagem, para comentar, clique no botão amarelo "Comentar". Você será direcionado para uma página específica da postagem, onde será possível comentar e conferir comentários de outros usuários referentes àquela postagem.
 
@@ -77,6 +77,6 @@ A primeira funcionalidade é muito importante. Afinal, ela permite conceder e re
 
 ![editar perfil](https://user-images.githubusercontent.com/90480715/145691701-747d197e-a5be-46ac-bdc3-6d0f14b62c96.jpg)
 
-## Excluir-Comentários/Postagens(Administrador)
+## Excluir-Comentarios/Postagens(Administrador)
 
 O administrador também pode excluir postagens, comentários e usuários que desrespeitam as regras da rede social. Para excluir usuários, vá na mesma dashboard comentada acima e será possível excluir o perfil de um usuário. Já nas postagens e comentários, o botão de excluir estará lá mesmo.
