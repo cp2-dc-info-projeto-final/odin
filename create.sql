@@ -1,6 +1,3 @@
--- ADM: adm@gmail.com // Senha: adminroot
--- Usuário comum: teste@gmail.com // Senha: teste123
-
 DROP DATABASE IF EXISTS odin;
 
 CREATE DATABASE odin;
