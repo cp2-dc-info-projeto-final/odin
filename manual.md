@@ -14,7 +14,7 @@ Bem-vindo ao Odin, uma rede social para a divulgação de produtos para venda e 
  - [Barra-De-Pesquisa](#Barra-De-Pesquisa)
  - [Editar-Perfil](#Editar-Perfil)
  - [Conceder_Retirar-administrador](#Conceder_Retirar-administrador)
- - [Excluir-Comentarios_Postagens(Administrador)](#Excluir-Comentarios_Postagens(Administrador))
+ - [Excluir-Comentarios_Postagens-administrador](#Excluir-Comentarios_Postagens-administrador)
  
 ##  Cadastro
 
@@ -77,6 +77,6 @@ A primeira funcionalidade é muito importante. Afinal, ela permite conceder e re
 
 ![editar perfil](https://user-images.githubusercontent.com/90480715/145691701-747d197e-a5be-46ac-bdc3-6d0f14b62c96.jpg)
 
-##  Excluir-Comentarios_Postagens(Administrador)
+##  Excluir-Comentarios_Postagens-administrador
 
 O administrador também pode excluir postagens, comentários e usuários que desrespeitam as regras da rede social. Para excluir usuários, vá na mesma dashboard comentada acima e será possível excluir o perfil de um usuário. Já nas postagens e comentários, o botão de excluir estará lá mesmo.
