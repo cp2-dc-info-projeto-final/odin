@@ -13,7 +13,7 @@ Bem-vindo ao Odin, uma rede social para a divulgação de produtos para venda e 
  - [Criar-Comentarios](#Criar-Comentarios)
  - [Barra-De-Pesquisa](#Barra-De-Pesquisa)
  - [Editar-Perfil](#Editar-Perfil)
- - [Conceder/Retirar-Administrador](#Conceder/Retirar-Administrador)
+ - [Conceder/Retirar-administrador](#Conceder/Retirar-administrador)
  - [Excluir-Comentarios/Postagens(Administrador)](#Excluir-Comentarios/Postagens(Administrador))
  
 ##  Cadastro
@@ -69,7 +69,7 @@ As opções citadas acima se assemelham ao processo de cadastro. Ao clicar em "A
 
 ![alterar senha](https://user-images.githubusercontent.com/90480715/145691388-74c2d53f-743e-405a-8f69-68ef79978389.jpg)
 
-## Conceder/Retirar-Administrador
+## Conceder/Retirar-administrador
 
 A primeira funcionalidade é muito importante. Afinal, ela permite conceder e retirar o cargo de administrador a outras pessoas da rede social. Isso pode facilitar o monitoramento e o controle da rede e sua comunidade. Para fazer isso, clique em Dashboard na barra de navegação do menu principal. Uma página exibirá uma lista com todos os usuários da rede, onde o administrador poderá alterar informações de usuários, excluí-los e elevá-los ou rebaixá-los do cargo de administrador através do botão "Alterar informações". Contudo, tenha responsabilidade ao usar desse poder, assim como de qualquer outro nessa lista.
 
