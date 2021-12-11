@@ -2,8 +2,19 @@
 
 <?php 
     include "auth.inc";
-    include "usuario_get.inc";
     include "mysqli_connect.inc";
+
+    $idpost = $_GET["idpost"];
+    $sql = "SELECT * FROM posts WHERE id = $idpost;";
+    $res = mysqli_query($mysqli,$sql);
+    $post = mysqli_fetch_array($res);
+
+    $sql = "SELECT * FROM usuarios WHERE id =" .$post["id_usuario"]. ";";
+    $res = mysqli_query($mysqli,$sql);
+    $postuser = mysqli_fetch_array($res);
+
+    $data_hora = new DateTime($post["data_hora"]);
+    $data_hora = $data_hora->format("d/m/Y H:i");
 ?>
 
 <html lang="pt-br">
@@ -11,7 +22,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Odin - Perfil</title>
+        <title>Odin - Post</title>
         <link rel="stylesheet" href="_css/styleperfil.css" />
     </head>
 
@@ -35,16 +46,15 @@
             </nav>
         </header>
     
-        <main rel="stylesheet" href="_css/styleadm.css" style="margin: 250px 200px; 
-        padding: 0; 
-        font-family: Arial, Helvetica, sans-serif; 
-        font-size: 16px;">
+        <main rel="stylesheet" href="_css/styleadm.css" style="margin: 250px 200px; padding: 0; font-family: Arial, Helvetica, sans-serif; font-size: 16px;">
             <script src="_js/mobile-navbar.js"></script>
             <script src="_js/excluir.js"></script>
             <script src="_js/excluirpost.js"></script>
             <script src="_js/linkeditar.js"></script>
-            <script src="_js/curtir.js"></script>
-            <script src="_js/descurtir.js"></script>
+            <script src="_js/curtircom.js"></script>
+            <script src="_js/descurtircom.js"></script>
+            <script src="_js/editarcom.js"></script>
+            <script src="_js/excluircom.js"></script>
 
         <section class="flex"> 
             <div class="card-container">
@@ -56,22 +66,22 @@
 
        
       
-      <ul>
+      <ul style="list-style: none;">
         <li class="post">
           <div class="infoUserPost">
-            <div class="imgUserPost"></div>
+            <!--<div class="imgUserPost" style="width: 100%;"><img src="<?php //echo $postuser["fotoperfil"]; ?>" style="width: 100%; border-radius: 50%"></div>-->
 
             <div class="nameAndHour">
-              <strong>Erick Silva</strong>
-              <p>14h</p>
+              <strong><?php echo $postuser["nome"]. " " .$postuser["sobrenome"]; ?></strong>
+              <p><?php echo $data_hora; ?></p>
             </div>
           </div>
 
         <p>
-          Queria compartilhar o quão barato está o PS6 e a placa de vídeo 4090, estão por somente 10 reais aqui na Lucas'bazar 
-          sim e essa é a ultima chance de você conseguir esses produtos por esses preços e na compra dos dois você ganha 
-          um xbox series Z venha logo a Rua outubro melhor mês N 666
+          <?php echo $post["texto"]; ?>
         </p>
+
+        <img style="width: 100%; margin-bottom: 10px; border-radius: 2.5%" src="<?php echo $post["midia"]; ?>">
 
         <div class="actionBtnPost">
           
@@ -85,39 +95,74 @@
                             <div class="infoUserPost">
                               <div class="imgUserPost"><img src="_img/viking.png" style="width: 100%; border-radius: 50%"></div>
                                 
-                              <div class="nameAndHour">
-                                <strong>Erick Lima</strong>
-                                <p>10/12/2021 17:45</p>
+                              <div class="nameAndHour" style="margin-bottom: 40px;">
+                                <strong><?php echo $usuario["nome"]. " " .$usuario["sobrenome"]; ?></strong>
                               </div>
                             </div>
+                          <form action="comentar.php" method="POST">
+                            <input type="hidden" name = "idpost" value = "<?php echo $post["id"]; ?>">
+                            <input type="hidden" name = "iduser" value = "<?php echo $usuario["id"]; ?>">
+                            <textarea name="comentario" style="margin-top: -20px; margin-bottom: 10px; width: 900px; height: 100px;" placeholder="Comente aqui!"></textarea>
+                            
+                            <div class="actionBtnPost" style="position: relative; left: 82%;">
+                              <button type="submit" class="filesPost like">Comentar</button>
+                            </div>
+                          </form>
+                      </li>
 
-                          <textarea style="margin: 0px; width: 902px; height: 203px;">comentario foda</textarea>
-                          <img style="width: 100%; margin-bottom: 10px; border-radius: 2.5%" src="">
-                          <div class="actionBtnPost"><button type="button" class="filesPost like" onclick="curtir(3, 25)">Comentar</button><button type="button" class="filesPost share" onclick="editarPost(25)">Editar</button><button type="button" class="filesPost like" onclick="excluirPost(25)">Excluir</button></div></li><li class="post">
-                            <div class="infoUserPost">
-                              <div class="imgUserPost"><img src="_img/viking.png" style="width: 100%; border-radius: 50%"></div>
+                      <?php
+                        $sql = "SELECT * FROM comentarios WHERE id_post = " .$post["id"]. " ORDER BY id DESC;";
+                        $res = mysqli_query($mysqli,$sql);
+                        $linhas = mysqli_num_rows($res);
+                        for ($i = 0; $i < $linhas; $i++){
+                          $com = mysqli_fetch_array($res);
+
+                          $sqluser = "SELECT * FROM usuarios WHERE id = " .$com["id_usuario"]. ";";
+                          $resuser = mysqli_query($mysqli,$sqluser);
+                          $comuser = mysqli_fetch_array($resuser);
+
+                          $data_hora = new DateTime($com["data_hora"]);
+                          $data_hora = $data_hora->format("d/m/Y H:i");
+
+                          $sqllike = "SELECT * FROM curtidas WHERE id_usuario = " .$_SESSION["id"]. " AND id_comentario = " .$com["id"]. ";";
+                          $reslike = mysqli_query($mysqli, $sqllike);
+                          $linhaslike = mysqli_num_rows(mysqli_query($mysqli, $sqllike));
+                      ?>
+                      
+                        <li class="post">
+                          <div class="infoUserPost">
+                            <div class="imgUserPost"><img src="_img/viking.png" style="width: 100%; border-radius: 50%"></div>
                                 
-                              <div class="nameAndHour">
-                                <strong>Erick Lima</strong>
-                                <p>10/12/2021 17:10</p>
-                              </div>
+                            <div class="nameAndHour">
+                              <strong><?php echo $comuser["nome"]. " " .$comuser["sobrenome"]; ?></strong>
+                              <p><?php echo $data_hora; ?></p>
                             </div>
+                          </div>
 
-                          <p>teste do teste</p>
-                          <img style="width: 100%; margin-bottom: 10px; border-radius: 2.5%" src="">
-                          <div class="actionBtnPost"><button type="button" class="filesPost like" onclick="curtir(3, 24)"><img src="./assets/heart.svg" alt="Curtir">Curtir</button><button type="button" class="filesPost comment"><img src="./assets/comment.svg" alt="Comentar">Comentar</button><button type="button" class="filesPost share" onclick="editarPost(24)">Editar</button><button type="button" class="filesPost like" onclick="excluirPost(24)">Excluir</button></div></li><li class="post">
-                            <div class="infoUserPost">
-                              <div class="imgUserPost"><img src="_img/viking.png" style="width: 100%; border-radius: 50%"></div>
-                                
-                              <div class="nameAndHour">
-                                <strong>Erick Lima</strong>
-                                <p>10/12/2021 17:10</p>
-                              </div>
-                            </div>
+                          <p><?php echo $com["texto"]; ?></p>
 
-                          <p>lab lab</p>
-                          <img style="width: 100%; margin-bottom: 10px; border-radius: 2.5%" src="">
-                          <div class="actionBtnPost"><button type="button" class="filesPost like" onclick="curtir(3, 23)"><img src="./assets/heart.svg" alt="Curtir">Curtir</button><button type="button" class="filesPost comment"><img src="./assets/comment.svg" alt="Comentar">Comentar</button><button type="button" class="filesPost share" onclick="editarPost(23)">Editar</button><button type="button" class="filesPost like" onclick="excluirPost(23)">Excluir</button></div></li>                  </ul>
+                          <div class="actionBtnPost">
+                            <?php
+                              if ($linhaslike != 1){
+                                echo '<button type="button" class="filesPost like" onclick="curtircom(' .$_SESSION["id"]. ', ' .$com["id"]. ')"><img src="./assets/heart.svg" alt="Curtir">Curtir</button>';
+                              }
+                              else{
+                                echo '<button type="button" class="filesPost like" onclick="descurtircom(' .$_SESSION["id"]. ', ' .$com["id"]. ')"><img src="./assets/heart.svg" alt="Descurtir">Descurtir</button>';
+                              }
+                              
+                              //echo '<button type="button" class="filesPost comment" onclick="comentar(' .$com["id"]. ')"><img src="./assets/comment.svg" alt="Comentar">Comentar</button>';
+                              
+                              if ($_SESSION["id"] == $comuser["id"]){
+                                echo '<button type="button" class="filesPost share" onclick="editarCom(' .$com["id"]. ')">Editar</button>';
+                              }
+                              if ($_SESSION["adm"] == 1 || $_SESSION["id"] == $comuser["id"]){
+                                echo '<button type="button" class="filesPost like" onclick="excluirCom(' .$com["id"]. ')">Excluir</button>';
+                              }
+                            ?>
+                          </div>
+                        </li>
+                      <?php } ?>
+                    </ul>
                 </div>  
             </div>
         </section>

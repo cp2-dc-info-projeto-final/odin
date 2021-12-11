@@ -49,6 +49,7 @@
             <script src="_js/linkeditar.js"></script>
             <script src="_js/curtir.js"></script>
             <script src="_js/descurtir.js"></script>
+            <script src="_js/comment.js"></script>
 
         <section class="flex"> 
             <div class="card-container">
@@ -110,7 +111,7 @@
                           else{
                             echo '<button type="button" class="filesPost like" onclick="descurtir(' .$_SESSION["id"]. ', ' .$post["id"]. ')"><img src="./assets/heart.svg" alt="Descurtir">Descurtir</button>';
                           }
-                          echo '<button type="button" class="filesPost comment"><img src="./assets/comment.svg" alt="Comentar">Comentar</button>';
+                          echo '<button type="button" class="filesPost comment" onclick="comentar(' .$post["id"]. ')"><img src="./assets/comment.svg" alt="Comentar">Comentar</button>';
                             if ($_SESSION["id"] == $usuario["id"]){
                               echo '<button type="button" class="filesPost share" onclick="editarPost(' .$post["id"]. ')">Editar</button>';
                             }

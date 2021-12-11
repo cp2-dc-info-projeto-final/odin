@@ -17,15 +17,14 @@
     <header>
       <script src="_js/logout.js"></script>
 
-      <nav class="navbar fixed-top navbar-expand-sm 
-      navbar-dark bg-dark">
+      <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark" style="width: 100%;">
 
         <a  
           href="#" 
-          class="navbar-brand mb-0 h1">
-            <img 
+          class="navbar-brand mb-0 h1" style="margin-left: 20px;">
+            <!--<img 
             class="d-inline-block align-top" src="./assets/icon8.svg.jpeg" 
-            width="30" height="30"/>
+            width="30" height="30"/>-->
           Odin
         </a>
         <button 
@@ -72,7 +71,7 @@
             </li>
           </ul>          
         </div>
-        <form class="d-flex" action="busca.php" method="POST">
+        <form class="d-flex" action="busca.php" method="POST" style="width: 25%; margin-right: 40px">
           <input type="text" class="form-control me-2" name="busca">
           <button type="submit" class="btn btn-primary custom-btn" style="color: white;">Procurar</button>
         </form>
@@ -81,16 +80,17 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </header>
 
-    <main class="main">
+    <main class="main" style="width: 100%;">
       <script src="_js/mobile-navbar.js"></script>
       <script src="_js/excluirpost.js"></script>
       <script src="_js/linkeditar.js"></script>
       <script src="_js/curtir.js"></script>
       <script src="_js/descurtir.js"></script>
+      <script src="_js/comment.js"></script>
 
       <!---Formulario de Postagens-->
       <li style="height: 50px;"></li>
-      <div class="newPost">
+      <div class="newPost" style="width: 100%">
           <div class="infoUser">
                 <div class="imgUser"><img src="<?php echo $usuario["fotoperfil"]; ?>" style="width: 100%; border-radius: 50%"></div>
                 <strong><?php echo $usuario["nome"] . " " . $usuario["sobrenome"]; ?></strong>
@@ -133,7 +133,7 @@
             $postuser = mysqli_fetch_array($resuser);
             $data_hora = new DateTime($post["data_hora"]);
             $data_hora = $data_hora->format("d/m/Y H:i");
-            echo '<li class="post">
+            echo '<li class="post" style="width: 100%">
               <div class="infoUserPost">
                 <div class="imgUserPost"><img src="' .$postuser["fotoperfil"]. '" style="width: 100%; border-radius: 50%"></div>
                   
@@ -157,7 +157,7 @@
               echo '<button type="button" class="filesPost like" onclick="descurtir(' .$_SESSION["id"]. ', ' .$post["id"]. ')"><img src="./assets/heart.svg" alt="Descurtir">Descurtir</button>';
             }
             
-            echo '<button type="button" class="filesPost comment"><img src="./assets/comment.svg" alt="Comentar">Comentar</button>';
+            echo '<button type="button" class="filesPost comment" onclick="comentar(' .$post["id"]. ')"><img src="./assets/comment.svg" alt="Comentar">Comentar</button>';
               if ($_SESSION["id"] == $postuser["id"]){
                 echo '<button type="button" class="filesPost share" onclick="editarPost(' .$post["id"]. ')">Editar</button>';
               }

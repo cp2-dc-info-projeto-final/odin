@@ -6,6 +6,12 @@
     $res = mysqli_query($mysqli,$sql);
     $post = mysqli_fetch_array($res);
 
+    $sql = "DELETE FROM comentarios WHERE id_post = '$id';";
+    mysqli_query($mysqli, $sql);
+
+    $sql = "DELETE FROM curtidas WHERE id_post = '$id';";
+    mysqli_query($mysqli, $sql);
+
     unlink($post["midia"]);
 
     $sql = "DELETE FROM posts WHERE id = '$id';";
