@@ -8,13 +8,13 @@ Bem-vindo ao Odin, uma rede social para a divulgação de produtos para venda e 
  - [LogIn](#LogIn)
  - [Timeline](#Timeline)
  - [Postagens](#Postagens)
- - [Editar/Excluir](#Editar/Excluir)
- - [Curtir/Descurtir](#Curtir/Descurtir)
+ - [Editar_Excluir](#Editar_Excluir)
+ - [Curtir_Descurtir](#Curtir_Descurtir)
  - [Criar-Comentarios](#Criar-Comentarios)
  - [Barra-De-Pesquisa](#Barra-De-Pesquisa)
  - [Editar-Perfil](#Editar-Perfil)
- - [Conceder/Retirar](#Conceder/Retirar)
- - [Excluir-Comentarios/Postagens(Administrador)](#Excluir-Comentarios/Postagens(Administrador))
+ - [Conceder_Retirar-administrador](#Conceder_Retirar-administrador)
+ - [Excluir-Comentarios_Postagens(Administrador)](#Excluir-Comentarios_Postagens(Administrador))
  
 ##  Cadastro
 
@@ -39,13 +39,13 @@ No menu principal, serão exibidas diversas postagens, essa área é chamada de 
 
 Como foi dito anteriormente, você pode fazer postagens em poucos passos. Primeiramente, você irá digitar o texto para a postagem na caixa sinalizada por "Mostre seus produtos!". Para colocar imagens, clique em "Anexar". Entretanto, tenha bom senso para não quebrar as diretrizes da rede social, nem ofender e desrespeitar alguém ou algo. Os administradores estão atentos para excluir qualquer postagem, comentário ou perfil que desrespeite as regras na comunidade.
 
-##  Editar/Excluir
+##  Editar_Excluir
 
 Se você desejar editar ou excluir uma postagem ou um comentário seu, saiba que é possível e de fácil acesso. Na própria postagem e no comentário, um botão de edição e outro de exclusão estarão disponíveis. Para excluir, clique e confirme a exclusão no alerta que aparecerá acima. E para editar, clique e você será direcionado para uma página de edição de postagens e comentários.
 
 ![editar postagem](https://user-images.githubusercontent.com/90480715/145690978-4010738c-415d-4b01-bda0-3ce6c86807d1.jpg)
 
-##  Curtir/Descurtir
+##  Curtir_Descurtir
 
 Além de postar, você também pode curtir e descurtir postagens e comentários. Na parte inferior, no lado esquerdo, um botão com uma figura de coração estará sendo exibido. Através dele, você poderá externar seu gosto e suas preferências. 
 
@@ -69,7 +69,7 @@ As opções citadas acima se assemelham ao processo de cadastro. Ao clicar em "A
 
 ![alterar senha](https://user-images.githubusercontent.com/90480715/145691388-74c2d53f-743e-405a-8f69-68ef79978389.jpg)
 
-##  Conceder/Retirar
+##  Conceder_Retirar-administrador
 
 A primeira funcionalidade é muito importante. Afinal, ela permite conceder e retirar o cargo de administrador a outras pessoas da rede social. Isso pode facilitar o monitoramento e o controle da rede e sua comunidade. Para fazer isso, clique em Dashboard na barra de navegação do menu principal. Uma página exibirá uma lista com todos os usuários da rede, onde o administrador poderá alterar informações de usuários, excluí-los e elevá-los ou rebaixá-los do cargo de administrador através do botão "Alterar informações". Contudo, tenha responsabilidade ao usar desse poder, assim como de qualquer outro nessa lista.
 
@@ -77,6 +77,6 @@ A primeira funcionalidade é muito importante. Afinal, ela permite conceder e re
 
 ![editar perfil](https://user-images.githubusercontent.com/90480715/145691701-747d197e-a5be-46ac-bdc3-6d0f14b62c96.jpg)
 
-##  Excluir-Comentarios/Postagens(Administrador)
+##  Excluir-Comentarios_Postagens(Administrador)
 
 O administrador também pode excluir postagens, comentários e usuários que desrespeitam as regras da rede social. Para excluir usuários, vá na mesma dashboard comentada acima e será possível excluir o perfil de um usuário. Já nas postagens e comentários, o botão de excluir estará lá mesmo.
