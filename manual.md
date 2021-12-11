@@ -5,8 +5,9 @@ Bem-vindo ao Odin, uma rede social para a divulgação de produtos para venda e 
 **Lista das Funcionalidades:**
 
  - [Cadastro](#Cadastro)
- - [Funcionalidade Y](#Funcionalidade-Y)
- - [Funcionalidade Z](#Funcionalidade-Z)
+ - [Log In](#Log In)
+ - [Timeline](#Timeline)
+ - [Postagens](#Postagens)
 
 ##  Cadastro
 
@@ -15,14 +16,18 @@ A primeira etapa para acessar o Odin é o cadastro, no qual você informará tod
 ![casdastro](https://user-images.githubusercontent.com/90480715/145690323-26668df4-80d5-48ff-9d53-6585176108be.jpg)
 
 
-## Funcionalidade Y
+## Log In
 
-In vestibulum euismod orci, vitae mollis neque luctus vel. Aliquam erat volutpat. Pellentesque nulla elit, iaculis posuere interdum a, imperdiet sollicitudin dui. Morbi consectetur cursus dictum. Etiam vel feugiat tortor, non tempor nibh. Nam eu massa libero. Donec id eleifend justo, tempus consectetur augue. Phasellus porttitor ex leo. Proin efficitur ante vel tortor tempus ornare. Cras molestie, velit non laoreet lobortis, nisl metus volutpat augue, id dictum libero ipsum a mi. Quisque eget tristique felis.
+Após completar o cadastro, você será direcionado para a tela de Log In, onde será necessário o preenchimento do e-mail e senha cadastrados. Se tudo estiver correspondente, o menu principal da rede social será exibido, mas se houver algum erro, você será alertado e precisará preencher o formulário de Log In novamente
 
-Donec auctor a orci a semper. Nunc consequat dui vel eros faucibus molestie. Praesent euismod purus nec justo iaculis varius. Integer vehicula ac metus at ultricies. Maecenas pulvinar neque sed est sollicitudin, vitae dignissim magna posuere. Sed consectetur, mi nec bibendum sodales, urna sem aliquam leo, mollis vulputate justo leo vel nunc. Sed lacinia ipsum lacus, ultrices iaculis tellus efficitur at. Proin consectetur orci ac egestas aliquam. Proin dignissim euismod turpis sollicitudin interdum. Mauris pellentesque, orci non accumsan lobortis, nunc felis hendrerit tortor, non rutrum risus nisl id erat.
+![Log In](https://user-images.githubusercontent.com/90480715/145690698-dacba4d9-62b5-40a9-b2a9-20aaa60deaaa.jpg)
 
-## Funcionalidade Z
+## Timeline
 
-Sed consequat, diam in imperdiet fringilla, magna metus vehicula ipsum, eu tincidunt massa dolor eget lorem. Integer pellentesque in massa in eleifend. Phasellus a interdum enim. Nullam malesuada nulla eu mi vestibulum imperdiet. Maecenas diam dolor, commodo eget commodo at, congue in libero. Morbi non erat enim. Nunc faucibus lacus urna. Aliquam erat volutpat. Aliquam ex nunc, dictum vel libero sit amet, varius pulvinar risus. Aenean tempus magna at nulla elementum, vel feugiat turpis sodales. Vestibulum viverra congue nibh sed tempor. Morbi faucibus rhoncus dictum. Vestibulum rutrum, nisi id porttitor posuere, purus leo accumsan turpis, sit amet rutrum nulla turpis sit amet ex. Sed ultricies pharetra libero, sed tempor tellus hendrerit eget. Maecenas nibh sem, accumsan ullamcorper felis sed, pharetra semper dolor. Pellentesque ornare lorem eu condimentum tincidunt.
+No menu principal, serão exibidas diversas postagens, essa área é chamada de timeline ("linha do tempo"). Suas postagens e as postagens dos outros integrantes vão aparecer aqui. Porém, não só pra isso serve a timeline, você poderá também criar suas postagens, comentar em postagens de outras pessoas e curtir comentários e postagens.
 
-Nam lacinia gravida velit et ultricies. Quisque blandit a ligula at tincidunt. Vestibulum id odio a lectus maximus tempor non in augue. Duis vulputate dui vitae lacus ornare, et eleifend erat cursus. Mauris viverra, massa vel eleifend tempus, nunc justo tempus quam, ac sollicitudin lorem arcu vitae magna. Aliquam eleifend diam neque, at sagittis eros scelerisque vitae. Sed convallis iaculis tempor. Pellentesque in varius velit. Cras ut risus at ligula tristique tincidunt ac a risus. Morbi egestas tincidunt nunc, molestie aliquam nisl imperdiet egestas. Morbi hendrerit augue ac accumsan posuere. Sed a sodales elit. Nullam pharetra rhoncus arcu, eget pharetra massa egestas ut. Sed accumsan auctor dictum. Duis leo enim, pulvinar ut enim a, tempor aliquam dui. Nunc aliquet quam justo, sed aliquet justo tincidunt sed.
+![timeline](https://user-images.githubusercontent.com/90480715/145690735-d4d7751e-9f9d-4210-a8f0-966178a73f83.jpg)
+
+## Postagens
+
+Como foi dito anteriormente, você pode fazer postagens em poucos passos. Primeiramente, você irá digitar o texto para a postagem na caixa sinalizada por "Mostre seus produtos!". Para colocar imagens, clique em "Anexar". Entretanto, tenha bom senso para não quebrar as diretrizes da rede social, nem ofender e desrespeitar alguém ou algo. Os administradores estão atentos para excluir qualquer postagem, comentário ou perfil que desrespeite as regras na comunidade.
