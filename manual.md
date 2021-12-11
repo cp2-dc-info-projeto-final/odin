@@ -10,7 +10,7 @@ Bem-vindo ao Odin, uma rede social para a divulgação de produtos para venda e 
  - [Postagens](#Postagens)
  - [Editar/Excluir](#Editar/Excluir)
  - [Curtir/Descurtir](#Curtir/Descurtir)
- - [Criar-Comentarios](#Criar-Comentarios)
+ - [Criar-Comentários](#Criar-Comentarios)
  - [Barra-De-Pesquisa](#Barra-De-Pesquisa)
  - [Editar-Perfil](#Editar-Perfil)
  - [Conceder/Retirar-Administrador](#Conceder/Retirar-Administrador)
@@ -51,7 +51,7 @@ Além de postar, você também pode curtir e descurtir postagens e comentários.
 
 ![curtir](https://user-images.githubusercontent.com/90480715/145691252-8553856b-6bc1-487d-9571-377dc78d4fed.jpg)
 
-## Criar-Comentarios
+## Criar-Comentários
 
 Também é possível escrever comentários em postagens. Ao conferir uma postagem, para comentar, clique no botão amarelo "Comentar". Você será direcionado para uma página específica da postagem, onde será possível comentar e conferir comentários de outros usuários referentes àquela postagem.
 
