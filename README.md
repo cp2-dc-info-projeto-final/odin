@@ -37,7 +37,7 @@ O público-alvo do projeto são pessoas com interesse em compartilhar produtos n
 - [Manual do Usuário](manual.md)
 - [Requisitos](requisitos.md)
 - [Casos de Uso](casos-de-uso.md)
-- [Apresentação](Apresentação-Odin.pdf)
+- [Apresentação](Apresentação - Odin.pdf)
 
 **Diagrama de Classes**
 
