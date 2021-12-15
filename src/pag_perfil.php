@@ -68,11 +68,14 @@
                     <p></p>
                     <p> <?php echo $usuario["telefone"]; ?> </p>
                     <?php
-                      echo "<a onclick='confirmarExclusao(".$usuario["id"].")' class='btn'> Excluir Perfil</a>";
-                      echo "<p></p>";
-                      echo "<a href='editar.php?id=".$usuario["id"]."' class='btn'> Alterar Informações</a>";
-                      if ($_SESSION["id"] == $usuario["id"]){
-                          echo "<p></p> <a href='altsenha.php?id=".$usuario["id"]."' class='btn'>Alterar Senha</a>";
+                      if ($_SESSION["adm"] == 1 || $_SESSION["id"] == $usuario["id"]){
+                        echo "<a onclick='confirmarExclusao(".$usuario["id"].")' class='btn'> Excluir Perfil</a>";
+                        echo "<p></p>";
+                        echo "<a href='editar.php?id=".$usuario["id"]."' class='btn'> Alterar Informações</a>";
+
+                        if ($_SESSION["id"] == $usuario["id"]){
+                            echo "<p></p> <a href='altsenha.php?id=".$usuario["id"]."' class='btn'>Alterar Senha</a>";
+                        }
                       }
                     ?>
                 
