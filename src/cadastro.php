@@ -30,13 +30,15 @@
         <main>
             <script src="_js/mobile-navbar.js"></script>
 
+
             <div id="divcad" style="margin-left: 0px; margin-top: 10px;">
                 <form id="formcad" action = "cad.php" method = "POST">
+                   
                     <h3>Nome: <input type="text" name="nome" size="30" maxlength="30" required="required"></h3><br>
                     <h3>Sobrenome: <input type="text" name="sobrenome" size="30" maxlength="30" required="required"></h3><br>
                     <h3>Data de nascimento: <input type="date" name="datanasc" required="required" max="<?php echo date('Y-m-d', strtotime('-18 year')); ?>"></h3><br>
-                    <h3>E-mail: <input type="email" name="email" size="30" maxlength="30" required="required"></h3><br>
-                    <h3>Senha: <input type="password" name="senha" maxlength="20" minlength="8" required="required"></h3><br>
+                    <h3>E-mail: <input type="email" name="email" size="30" maxlength="30" placeholder="exemplo@email.com" required="required"></h3><br>
+                    <h3>Senha: <input type="password" name="senha" maxlength="20" minlength="8" placeholder="Digite uma senha de 8-20 caracteres" required="required"></h3><br>
                     <h3>Confirme sua senha: <input type="password" name="csenha" maxlength="20" minlength="8" required="required"></h3><br>
                     <h3>Telefone (celular): <input type="tel" name="telefone" pattern="[0-9]{2}[9]{1}[0-9]{8}$" required="required" placeholder="21912345678"></h3><br>
                     <input type="submit" value="Cadastrar">
